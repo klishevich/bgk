@@ -1,0 +1,19 @@
+<h2>Список страниц</h2>
+<table class="table table-bordered">
+    <thead>
+      <tr>
+        <th></th>
+        <th>Заголовок</th>
+        <th>Дата добавления</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @pages.each do |page| %>
+        <tr>
+          <td>Тут будут операции</td>
+          <td><%= link_to page.title, '#' %></td>
+          <td><%= page.created_at %></td>
+        </tr>
+      <% end %>
+    </tbody>
+</table>
