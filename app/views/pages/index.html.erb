@@ -1,17 +1,25 @@
 <h2>Список страниц</h2>
+<div class = "header-button">
+  <%= link_to "Создать", new_page_path, class: "btn btn-primary" %>
+</div>
 <table class="table table-bordered">
     <thead>
       <tr>
-        <th></th>
+        <th>Операции</th>
         <th>Заголовок</th>
+        <th>Описание</th>
         <th>Дата добавления</th>
       </tr>
     </thead>
     <tbody>
       <% @pages.each do |page| %>
         <tr>
-          <td>Тут будут операции</td>
+          <td>
+            <%= link_to "Редактировать", edit_page_path(page), class: "btn-sm btn-primary" %>
+            <%= link_to "Удалить", '#', class: "btn-sm btn-danger" %>
+          </td>
           <td><%= link_to page.title, '#' %></td>
+          <td><%= page.description %></td>
           <td><%= page.created_at %></td>
         </tr>
       <% end %>
