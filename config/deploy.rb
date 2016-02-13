@@ -50,7 +50,7 @@ namespace :unicorn do
   desc 'Restart unicorn 2'
   task :restart2 do
     on roles(:app) do
-      execute "/etc/init.d/unicorn_bpm_production restart"
+      execute "/etc/init.d/unicorn_bgk_production restart"
     end
   end  
 
