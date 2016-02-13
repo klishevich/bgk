@@ -29,20 +29,19 @@ set(:symlinks, [
 
 namespace :deploy do
 
-  after :restart, :clear_cache do
-    on roles(:app), in: :groups, limit: 4, wait: 10 do
-	    before :deploy, "deploy:check_revision"
-	    after :finishing, 'deploy:cleanup'
-  	  after 'deploy:setup_config', 'nginx:reload'
-      after 'deploy:publishing', 'deploy:restart'
-    end
-  end
-
   desc 'Restart application'
   task :restart do
     invoke 'unicorn:restart2'
   end
   after 'deploy:publishing', 'deploy:restart' 
+
+  # after :restart, :clear_cache do
+  #   on roles(:app), in: :groups, limit: 4, wait: 10 do
+  #     before :deploy, "deploy:check_revision"
+  #     after 'deploy:setup_config', 'nginx:reload'
+  #     after 'deploy:publishing', 'deploy:restart'
+  #   end
+  # end  
 
 end
 
@@ -50,7 +49,7 @@ namespace :unicorn do
 
   desc 'Restart unicorn 2'
   task :restart2 do
-    on roles(:app), in: :sequence, wait: 5 do
+    on roles(:app) do
       execute "/etc/init.d/unicorn_bgk_production restart"
     end
   end  
