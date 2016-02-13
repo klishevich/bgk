@@ -16,8 +16,8 @@
         <tr>
           <td>
             <%= link_to "Редактировать", edit_page_path(page), class: "btn-sm btn-primary" %>
-            <%= link_to "Просмотр", page.url, class: "btn-sm btn-default" %>
-            <%= link_to "Удалить", '#', class: "btn-sm btn-danger" %>
+            <%= link_to "Просмотр", custom_url_path(page), class: "btn-sm btn-default" %>
+            <%= link_to "Удалить  TO DO", '#', class: "btn-sm btn-danger" %>
           </td>
           <td><%= link_to page.title, '#' %></td>
           <td><%= page.description %></td>

@@ -1,11 +1,7 @@
-<h2>Просмотр страницы</h2>
-<div class="form-group">
-  <%= link_to "Список страниц", pages_path, class: "btn btn-default" %>
+<% provide(:title, @page.title) %>
+<% provide(:keywords, @page.keywords)%>
+<% provide(:description, @page.description) %>
+<h1><%= @page.title %></h1>
+<div>
+	<%= raw(@page.content) %>
 </div>
-<%= simple_form_for(@page, html: { class: 'form-horizontal' }) do |f| %>
-  <%= f.input :title %>
-  <%= f.input :keywords %>
-  <%= f.input :description %>
-  <%= f.input :url %>
-  <%= f.input :content %>
-<% end %>

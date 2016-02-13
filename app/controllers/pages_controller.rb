@@ -1,4 +1,5 @@
 class PagesController < ApplicationController
+  http_basic_authenticate_with name: "admin", password: "bgksite", except: [:show, :home]
   def home
   end
 
@@ -13,7 +14,8 @@ class PagesController < ApplicationController
   def create
     @page = Page.new(page_params)
     if @page.save
-      redirect_to @page
+      flash[:success] = t(:page_saved_successfuly)
+      redirect_to edit_page_path @page
     else
       render 'new'
     end  
@@ -26,8 +28,8 @@ class PagesController < ApplicationController
   def update
     @page = Page.find(params[:id])
     if @page.update_attributes(page_params)
-      flash[:success] = t(:page_updated_successfuly)
-      redirect_to @page
+      flash[:success] = t(:page_saved_successfuly)
+      redirect_to edit_page_path
     else
       render 'edit'
     end

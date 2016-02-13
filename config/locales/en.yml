@@ -21,3 +21,5 @@
 
 en:
   hello: "Hello world"
+  page_saved_successfuly: "Страница сохранена"
+  default_title: "Балтгеоком"
