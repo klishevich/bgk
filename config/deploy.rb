@@ -28,6 +28,7 @@ set(:symlinks, [
 ])
 
 namespace :deploy do
+  after 'deploy:publishing', 'deploy:restart'
 
   after :restart, :clear_cache do
     on roles(:app), in: :groups, limit: 4, wait: 10 do
