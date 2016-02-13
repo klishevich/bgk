@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
-  Page.all.each do |page|
-    get page.url, to: 'pages#show', id: page
+  if Page.table_exists?
+    Page.all.each do |page|
+      get page.url, to: 'pages#show', id: page.id
+    end
   end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -17,11 +17,14 @@ ActiveRecord::Schema.define(version: 20160204201002) do
   enable_extension "plpgsql"
 
   create_table "pages", force: :cascade do |t|
-    t.text     "content"
     t.string   "title"
-    t.string   "keywords"
-    t.string   "description"
+    t.text     "keywords"
+    t.text     "description"
     t.string   "url"
+    t.string   "h1"
+    t.text     "content"
+    t.string   "menu_title"
+    t.integer  "menu_order"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
