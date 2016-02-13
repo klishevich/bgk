@@ -4,7 +4,7 @@ lock '3.4.0'
 set :application, 'bgk'
 set :deploy_user, 'mike'
 
-
+set :filter, :roles => %w{app web}
 set :scm, :git
 set :repo_url, 'git@github.com:klishevich/bgk.git'
 set :assets_roles, [:app]
