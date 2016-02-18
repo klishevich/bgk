@@ -10,9 +10,9 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<div class="container">
+<div id="main_container" class="container">
 	<%= render 'layouts/navigation' %>
-	<img src='/baner_menu2080.jpg' class="img-responsive"%>
+	<a href="/"><img src='/images/baner_header.jpg' class="img-responsive"%></a>
 	<%= render 'layouts/messages' %>
 	<%= yield %>
 </div>

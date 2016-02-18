@@ -15,3 +15,56 @@
 	padding-left: 15px;
 	padding-right: 15px;
 }
+
+/* font-family: "CenturyGothicRegular"; */
+@font-face {
+    font-family: "CenturyGothicRegular";
+    src: url("/fonts/CenturyGothicRegular/CenturyGothicRegular.eot");
+    src: url("/fonts/CenturyGothicRegular/CenturyGothicRegular.eot?#iefix")format("embedded-opentype"),
+    url("/fonts/CenturyGothicRegular/CenturyGothicRegular.woff") format("woff"),
+    url("/fonts/CenturyGothicRegular/CenturyGothicRegular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+
+@font-face {
+	font-family: "CenturyGothicBold";
+    src: url("/fonts/CenturyGothicBold.ttf");
+    font-style: normal;
+    font-weight: normal;
+}
+
+.navbar{
+	font-family: "CenturyGothicBold";
+	font-size: 18px;
+}
+
+.navbar-default {
+    background-color: transparent; 
+    border-color: transparent;
+}
+
+.navbar-default .navbar-nav>li>a {
+	color: black;
+	&:hover {
+      text-decoration: underline;
+    }
+}
+
+#razmestit-zakaz {
+  background-image: url(/images/button_zakaz3.jpg);
+  background-size: 239px 40px;
+  background-repeat: no-repeat;
+  background-position: center;
+  /*background-color: #c7b39b; /* Цвет фона */
+  a {
+	  color: white;
+	  padding-left: 40px;
+      padding-right: 40px;
+  }
+}
+
+#nav-desktop {
+  padding-left: 60px;
+}
