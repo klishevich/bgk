@@ -8,9 +8,9 @@
 	  <%= f.input :description %>
 	  <%= f.input :url %>
 	  <%= f.input :h1 %>
-	  <%= f.input :content %>
 	  <%= f.input :menu_title %>
 	  <%= f.input :menu_order %>
+	  <%= f.input :content, :input_html => {:rows => 20 } %>
 	  <div class="form-group">
 	    <%= f.button :submit, value: "Сохранить", class: "btn btn-primary" %>
 	  </div>

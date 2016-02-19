@@ -206,6 +206,8 @@ en:
   activerecord:
     attributes:
       page:
+        menu_title: "Название пункта меню"
         menu_order: "Порядок в меню (0 не отображать в меню, 1 home page)"
+        content: "Содержимое страницы"
   page_saved_successfuly: "Страница сохранена"
   default_title: "Балтгеоком"
