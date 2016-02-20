@@ -1,7 +1,8 @@
 module PagesHelper
   def custom_url_path page
+    return '/' if page.menu_order == 1
   	return '/' + page.url if path_exists?(page.url)
-    page_path(page)
+    return page_path(page)
   end
 
   private

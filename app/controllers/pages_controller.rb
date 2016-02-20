@@ -9,6 +9,7 @@ class PagesController < ApplicationController
 
   def new
     @page = Page.new
+    @page.menu_order = 0
   end
 
   def create

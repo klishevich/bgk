@@ -98,8 +98,9 @@ en:
   errors: &errors
     format: ! '%{attribute} %{message}'
     messages:
+      home_page_exists: "Home page уже существует"
       accepted: must be accepted
-      blank: can't be blank
+      blank: "не может быть пустым"
       spam: "не должно содержать строку href"
       present: must be blank
       confirmation: ! "doesn't match %{attribute}"
