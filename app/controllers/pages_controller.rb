@@ -1,5 +1,17 @@
 class PagesController < ApplicationController
-  http_basic_authenticate_with name: ENV["http_basic_name"], password: ENV["http_basic_pass"], except: [:show, :home]
+  before_filter :authenticate, except: [:show, :home]
+
+  def authenticate
+    authenticate_or_request_with_http_basic do |username, password|
+      session[:authenticated] = username == ENV["http_basic_name"] && password == ENV["http_basic_pass"]
+    end
+  end
+
+  def authenticated?
+    session[:authenticated]
+  end
+  helper_method :authenticated?
+
   def home
   end
 
@@ -30,7 +42,7 @@ class PagesController < ApplicationController
     @page = Page.find(params[:id])
     if @page.update_attributes(page_params)
       flash[:success] = t(:page_saved_successfuly)
-      redirect_to edit_page_path
+      redirect_to page_path
     else
       render 'edit'
     end
