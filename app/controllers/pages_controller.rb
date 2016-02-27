@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  http_basic_authenticate_with name: "admin", password: "bgksite", except: [:show, :home]
+  http_basic_authenticate_with name: ENV["http_basic_name"], password: ENV["http_basic_pass"], except: [:show, :home]
   def home
   end
 
