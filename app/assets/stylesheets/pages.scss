@@ -35,22 +35,53 @@
     font-weight: normal;
 }
 
-.navbar{
-	font-family: "CenturyGothicBold";
-	font-size: 18px;
+.nav-top {
+  font-size: 12px;
+  .hidden-xs{
+    width: 1024px;
+    .navbar-nav>li {
+      + li:before{
+        content: "|";
+        margin-top: 11px;
+        float: left;
+        color: #005D8F;
+      }
+      a {
+        margin-left: 2px;
+        padding: 10px 5px;
+        color: #005D8F;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  ul {
+    margin-left: 200px;
+  }
+  .download-file a{
+    padding-top: 12px;
+    float: right;
+    color: #231F20;
+  }
 }
+
+// .navbar{
+// font-family: "CenturyGothicBold";
+// 	font-size: 18px;
+// }
 
 .navbar-default {
     background-color: transparent; 
     border-color: transparent;
 }
 
-.navbar-default .navbar-nav>li>a {
-	color: black;
-	&:hover {
-      text-decoration: underline;
-    }
-}
+// .navbar-default .navbar-nav>li>a {
+// 	color: black;
+// 	&:hover {
+//       text-decoration: underline;
+//     }
+// }
 
 #razmestit-zakaz {
   background-image: url(/images/button_zakaz3.jpg);

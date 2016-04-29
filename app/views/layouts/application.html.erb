@@ -13,8 +13,9 @@
 </head>
 <body>
 <div id="main_container" class="container">
+  <%= render 'layouts/navigation_top' %>
+  <a href="/"><img src='/images/baner_header.jpg' class="img-responsive"%></a>
 	<%= render 'layouts/navigation' %>
-	<a href="/"><img src='/images/baner_header.jpg' class="img-responsive"%></a>
 	<%= render 'layouts/messages' %>
 	<%= yield %>
 </div>
