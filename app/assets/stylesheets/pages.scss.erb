@@ -1,6 +1,9 @@
 // Place all the styles related to the pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.container {
+    width: 1170px;
+}
 
 .header-button {
 	margin-bottom: 10px;
@@ -45,6 +48,7 @@
       width: 580px;
       border-bottom: 1px solid;
       border-color: #005D8F;
+      float: left;
       .nav-wrapper-inner{
         overflow: hidden;
         width: 560px;
@@ -68,10 +72,24 @@
       }
     }
   }
-  .download-file a{
-    padding-top: 12px;
+  .download-file {
+    overflow: hidden;
     float: right;
-    color: #231F20;
+    .download-file-icon {
+      margin-top: 8px;
+      width: 30px;
+      height: 30px;
+      float: left;
+      background-repeat: no-repeat;
+      background-image: url(<%= asset_path 'download_arrow_bottom.png' %>);
+      background-position: center center;
+    }
+    a {
+      padding-top: 12px;
+      float: left;
+      color: #231F20;
+    }
+
   }
 }
 
