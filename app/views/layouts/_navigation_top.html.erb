@@ -13,9 +13,13 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse">
       <div class="hidden-xs">
-          <ul class="nav navbar-nav">
-            <%= render 'layouts/navigation_top_items' %>
-          </ul>
+        <div class="nav-wrapper">
+          <div class="nav-wrapper-inner">
+            <ul class="nav navbar-nav">
+              <%= render 'layouts/navigation_top_items' %>
+            </ul>
+          </div>
+        </div>
         <div class="download-file">
           <%= link_to 'КАТАЛОГ ПРОДУКЦИИ', '#', class: "nav navbar-nav" %>
         </div>

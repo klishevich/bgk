@@ -39,25 +39,34 @@
   font-size: 12px;
   .hidden-xs{
     width: 1024px;
-    .navbar-nav>li {
-      + li:before{
-        content: "|";
-        margin-top: 11px;
-        float: left;
-        color: #005D8F;
-      }
-      a {
-        margin-left: 2px;
-        padding: 10px 5px;
-        color: #005D8F;
-        &:hover {
-          text-decoration: underline;
+    .nav-wrapper {
+      margin-left: 200px;
+      overflow: hidden;
+      width: 580px;
+      border-bottom: 1px solid;
+      border-color: #005D8F;
+      .nav-wrapper-inner{
+        overflow: hidden;
+        width: 560px;
+        margin: 0px auto;
+        .navbar-nav>li {
+          + li:before{
+            content: "|";
+            margin-top: 11px;
+            float: left;
+            color: #005D8F;
+          }
+          a {
+            margin-left: 2px;
+            padding: 10px 5px;
+            color: #005D8F;
+            &:hover {
+              text-decoration: underline;
+            }
+          }
         }
       }
     }
-  }
-  ul {
-    margin-left: 200px;
   }
   .download-file a{
     padding-top: 12px;
