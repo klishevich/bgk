@@ -20,39 +20,57 @@
 }
 
 /* font-family: "CenturyGothicRegular"; */
+// @font-face {
+//     font-family: "CenturyGothicRegular";
+//     src: url("/fonts/CenturyGothicRegular/CenturyGothicRegular.eot");
+//     src: url("/fonts/CenturyGothicRegular/CenturyGothicRegular.eot?#iefix")format("embedded-opentype"),
+//     url("/fonts/CenturyGothicRegular/CenturyGothicRegular.woff") format("woff"),
+//     url("/fonts/CenturyGothicRegular/CenturyGothicRegular.ttf") format("truetype");
+//     font-style: normal;
+//     font-weight: normal;
+// }
+
 @font-face {
-    font-family: "CenturyGothicRegular";
-    src: url("/fonts/CenturyGothicRegular/CenturyGothicRegular.eot");
-    src: url("/fonts/CenturyGothicRegular/CenturyGothicRegular.eot?#iefix")format("embedded-opentype"),
-    url("/fonts/CenturyGothicRegular/CenturyGothicRegular.woff") format("woff"),
-    url("/fonts/CenturyGothicRegular/CenturyGothicRegular.ttf") format("truetype");
-    font-style: normal;
-    font-weight: normal;
+  font-family: 'CenturyGothic';
+  src: url(<%= font_path 'CenturyGothicRegular/CenturyGothicRegular.eot' %>);
+  src: url(<%= font_path 'CenturyGothicRegular/CenturyGothicRegular.eot' %>) format('embedded-opentype'), 
+  url(<%= font_path 'CenturyGothicRegular/CenturyGothicRegular.woff' %>) format('woff'), 
+  url(<%= font_path 'CenturyGothicRegular/CenturyGothicRegular.ttf' %>) format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
+@font-face {
+	font-family: "CenturyGothic";
+    src: url(<%= font_path 'CenturyGothicBold.ttf' %>);
+    font-style: normal;
+    font-weight: bold;
+}
 
 @font-face {
-	font-family: "CenturyGothicBold";
-    src: url("/fonts/CenturyGothicBold.ttf");
-    font-style: normal;
-    font-weight: normal;
+  font-family: "CenturyGothic";
+    src: url(<%= font_path 'CenturyGothicBoldItalic.ttf' %>);
+    font-style: italic;
+    font-weight: bold;
 }
 
 .nav-top {
-  font-size: 12px;
+  font-family: "CenturyGothic";
   .hidden-xs{
     width: 1024px;
     .nav-wrapper {
-      margin-left: 200px;
-      overflow: hidden;
+      font-size: 14px;
+      margin-left: 240px;
+      // overflow: hidden;
       width: 580px;
       border-bottom: 1px solid;
       border-color: #005D8F;
       float: left;
       .nav-wrapper-inner{
-        overflow: hidden;
+        // overflow: hidden;
         width: 560px;
         margin: 0px auto;
+        height: 34px;
         .navbar-nav>li {
           + li:before{
             content: "|";
@@ -61,6 +79,8 @@
             color: #005D8F;
           }
           a {
+            display: block;
+            white-space: nowrap;
             margin-left: 2px;
             padding: 10px 5px;
             color: #005D8F;
@@ -71,25 +91,37 @@
         }
       }
     }
-  }
-  .download-file {
-    overflow: hidden;
-    float: right;
-    .download-file-icon {
-      margin-top: 8px;
-      width: 30px;
-      height: 30px;
-      float: left;
-      background-repeat: no-repeat;
-      background-image: url(<%= asset_path 'download_arrow_bottom.png' %>);
-      background-position: center center;
-    }
-    a {
-      padding-top: 12px;
-      float: left;
-      color: #231F20;
-    }
+    .download-file {
+      font-size: 12px;
+      overflow: hidden;
+      float: right;
+      .download-file-icon {
+        margin-top: 8px;
+        width: 30px;
+        height: 30px;
+        float: left;
+        background-repeat: no-repeat;
+        background-image: url(<%= asset_path 'download_arrow_bottom.png' %>);
+        background-position: center center;
+      }
+      a {
+        padding-top: 12px;
+        float: left;
+        color: #231F20;
+      }
 
+    }
+  }
+}
+
+.logo-block {
+  font-size: 20px;
+  .logo-block-text {
+    padding-top: 10px; 
+    padding-left: 50px;
+    font-family: "CenturyGothic";
+    font-weight: bold;
+    font-style: italic;
   }
 }
 
@@ -111,7 +143,6 @@
 // }
 
 #razmestit-zakaz {
-  background-image: url(/images/button_zakaz3.jpg);
   background-size: 239px 40px;
   background-repeat: no-repeat;
   background-position: center;
