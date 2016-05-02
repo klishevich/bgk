@@ -57,7 +57,7 @@
 .nav-top {
   font-family: "CenturyGothic";
   .hidden-xs{
-    width: 1024px;
+    // width: 1024px;
     .nav-wrapper {
       font-size: 14px;
       margin-left: 240px;
@@ -115,13 +115,39 @@
 }
 
 .logo-block {
-  font-size: 20px;
+  font-family: "CenturyGothic";
+  .col-md-4 {
+    width: 390px;
+  }
   .logo-block-text {
-    padding-top: 10px; 
+    font-size: 20px;
+    padding-top: 14px; 
     padding-left: 50px;
     font-family: "CenturyGothic";
     font-weight: bold;
     font-style: italic;
+  }
+  .logo-block-phone {
+    // width: 460px;
+    // height: 180px;
+    background: no-repeat;
+    background-image: url(<%= asset_path 'phone.png' %>); 
+    background-size:100% auto;
+    .tel {
+      margin-top: 4px;
+      margin-left: 150px;
+      color: white;
+    }
+    .hot-line {
+      margin-left: 150px;
+      color: white;
+      font-weight: bold;
+    }
+    .work-time {
+      color: #231F20;
+      font-size: 12px;
+      margin-top: 6px;
+    }
   }
 }
 
