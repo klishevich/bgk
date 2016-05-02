@@ -11,4 +11,6 @@ Rails.application.routes.draw do
 
   resources :pages
 
+  get '/newhome', to: 'pages#newhome'
+
 end

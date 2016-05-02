@@ -1,0 +1,3 @@
+<% Page.where("menu_order != 0").order(:menu_order).each do |page| %>
+  <li><%= link_to page.menu_title, custom_url_path(page) %></li>
+<% end %>

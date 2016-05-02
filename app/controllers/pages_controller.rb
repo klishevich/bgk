@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  before_filter :authenticate, except: [:show, :home]
+  before_filter :authenticate, except: [:show, :home, :newhome]
 
   def authenticate
     authenticate_or_request_with_http_basic do |username, password|
@@ -50,6 +50,10 @@ class PagesController < ApplicationController
 
   def show
   	@page=Page.find(params[:id])
+  end
+
+  def newhome
+    render layout: "application_new"
   end
 
   private

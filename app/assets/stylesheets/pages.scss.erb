@@ -19,17 +19,6 @@
 	padding-right: 15px;
 }
 
-/* font-family: "CenturyGothicRegular"; */
-// @font-face {
-//     font-family: "CenturyGothicRegular";
-//     src: url("/fonts/CenturyGothicRegular/CenturyGothicRegular.eot");
-//     src: url("/fonts/CenturyGothicRegular/CenturyGothicRegular.eot?#iefix")format("embedded-opentype"),
-//     url("/fonts/CenturyGothicRegular/CenturyGothicRegular.woff") format("woff"),
-//     url("/fonts/CenturyGothicRegular/CenturyGothicRegular.ttf") format("truetype");
-//     font-style: normal;
-//     font-weight: normal;
-// }
-
 @font-face {
   font-family: 'CenturyGothic';
   src: url(<%= font_path 'CenturyGothicRegular/CenturyGothicRegular.eot' %>);
@@ -52,6 +41,15 @@
     src: url(<%= font_path 'CenturyGothicBoldItalic.ttf' %>);
     font-style: italic;
     font-weight: bold;
+}
+
+.old-nav-bar {
+  font-family: "CenturyGothic";
+  font-weight: bold;
+  font-size: 18px;
+  // li>a {
+  //     color: black !important;
+  // }
 }
 
 .nav-top {
@@ -169,6 +167,7 @@
 // }
 
 #razmestit-zakaz {
+  background-image: url(<%= asset_path 'button_zakaz3.jpg' %>);
   background-size: 239px 40px;
   background-repeat: no-repeat;
   background-position: center;
