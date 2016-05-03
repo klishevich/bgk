@@ -43,16 +43,32 @@
     font-weight: bold;
 }
 
+//OLD
 .old-nav-bar {
   font-family: "CenturyGothic";
   font-weight: bold;
   font-size: 18px;
-  // li>a {
-  //     color: black !important;
-  // }
+  background-color: transparent; 
+  border-color: transparent;
 }
 
+#razmestit-zakaz {
+  background-image: url(<%= asset_path 'button_zakaz3.jpg' %>);
+  background-size: 239px 40px;
+  background-repeat: no-repeat;
+  background-position: center;
+  /*background-color: #c7b39b; /* Цвет фона */
+  a {
+    color: white;
+    padding-left: 40px;
+      padding-right: 40px;
+  }
+}
+//OLD
+
 .nav-top {
+  background-color: transparent; 
+  border-color: transparent;
   font-family: "CenturyGothic";
   .hidden-xs{
     // width: 1024px;
@@ -119,7 +135,7 @@
   }
   .logo-block-text {
     font-size: 20px;
-    padding-top: 14px; 
+    padding-top: 0px; 
     padding-left: 50px;
     font-family: "CenturyGothic";
     font-weight: bold;
@@ -143,39 +159,82 @@
     }
     .work-time {
       color: #231F20;
-      font-size: 12px;
+      font-size: 11px;
       margin-top: 6px;
+      margin-left: 22px;
     }
   }
 }
 
-// .navbar{
-// font-family: "CenturyGothicBold";
-// 	font-size: 18px;
-// }
-
-.navbar-default {
-    background-color: transparent; 
-    border-color: transparent;
-}
-
-// .navbar-default .navbar-nav>li>a {
-// 	color: black;
-// 	&:hover {
-//       text-decoration: underline;
-//     }
-// }
-
-#razmestit-zakaz {
-  background-image: url(<%= asset_path 'button_zakaz3.jpg' %>);
-  background-size: 239px 40px;
-  background-repeat: no-repeat;
-  background-position: center;
-  /*background-color: #c7b39b; /* Цвет фона */
-  a {
-	  color: white;
-	  padding-left: 40px;
-      padding-right: 40px;
+.nav-second {
+  min-height: inherit;
+  font-family: "CenturyGothic";
+  font-size: 16px;
+  background-color: #e8e8e8; 
+  border-color: transparent;
+  margin-top: 6px;
+  margin-right: -15px;
+  margin-left: -15px;
+  border: none;
+  border-radius: 0;
+  .hidden-xs {
+    .nav-wrapper {
+      margin-left: 40px;
+      width: 800px;
+      float: left;
+      .nav-wrapper-inner{
+        // width: 760px;
+        margin: 0px auto;
+        // height: 34px;
+        .navbar-nav {
+          li {
+            border-right:1px solid #231f20;
+            margin-top: 3px;
+            margin-bottom: 3px;
+            // + li:before{
+            //   content: "|";
+            //   // margin-top: 11px;
+            //   float: left;
+            //   // color: #005D8F;
+            // }
+          }
+          li.last {
+            border-right: none;
+          }
+          a {
+            margin-left: 10px;
+            margin-right: 10px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            // display: block;
+            white-space: nowrap;
+            // margin-left: 2px;
+            // padding: 10px 5px;
+            color: #231f20;
+            &:hover {
+              text-decoration: none;
+              color: #006a9c;
+            }
+          }
+        }
+      }
+    }
+    .vash-zakaz {
+      margin-top: 4px;
+      width: 232px;
+      height: 38px;
+      float: left;
+      background-repeat: no-repeat;
+      background-image: url(<%= asset_path 'backet.png' %>);
+      background-position: center center;
+      .vash-inner {
+        margin-left: 40px;
+        margin-top: 8px;
+        a {
+          color: white;
+        }
+      }
+    }
   }
 }
 
