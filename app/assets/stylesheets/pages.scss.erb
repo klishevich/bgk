@@ -61,7 +61,7 @@
   a {
     color: white;
     padding-left: 40px;
-      padding-right: 40px;
+    padding-right: 40px;
   }
 }
 //OLD
@@ -175,11 +175,12 @@
   margin-top: 6px;
   margin-right: -15px;
   margin-left: -15px;
+  margin-bottom: 0px;
   border: none;
   border-radius: 0;
   .hidden-xs {
     .nav-wrapper {
-      margin:0px;
+      margin-left: 30px;
       width: 800px;
       float: left;
       .nav-wrapper-inner{
@@ -222,9 +223,10 @@
     }
     .vash-zakaz {
       margin-top: 4px;
+      margin-right: 40px;
       width: 232px;
       height: 38px;
-      float: left;
+      float: right;
       background-repeat: no-repeat;
       background-image: url(<%= asset_path 'backet.png' %>);
       background-position: center center;
@@ -237,6 +239,21 @@
       }
     }
   }
+}
+
+.nav-stripe {
+  margin-right: -15px;
+  margin-left: -15px;
+  height: 10px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  background-image: url(<%= asset_path 'stripe-border.png' %>);
+  background-repeat: repeat-x;
+}
+
+.homepage {
+  margin-right: -15px;
+  margin-left: -15px;
 }
 
 #nav-desktop {
