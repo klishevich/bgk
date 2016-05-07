@@ -17,6 +17,7 @@
   <%= render 'layouts/logo_block' %>
 	<%= render 'layouts/navigation_second' %>
   <div class='nav-stripe'></div>
+  <div class='nav-breadcrumbs'><span><%= yield(:breadcrumb)%></span></div>
 	<%= render 'layouts/messages' %>
 	<%= yield %>
 </div>

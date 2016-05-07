@@ -250,9 +250,40 @@
   background-repeat: repeat-x;
 }
 
+.nav-breadcrumbs {
+  height: 20px;
+  background: #16568e; /* For browsers that do not support gradients */    
+  background: -webkit-linear-gradient(left, #281851 , #00a5dd); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, #281851, #00a5dd); /* For Opera 11.1 to 12.0 */  
+  background: -moz-linear-gradient(right, #281851, #00a5dd); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, #281851 , #00a5dd); /* Standard syntax (must be last) */
+  color: white;
+  span {
+    font-family: "CenturyGothic";
+    margin-left: 20px;
+    font-style: italic;
+  }
+}
+
 .homepage1 {
+  font-family: "CenturyGothic";
+  font-weight: bold;
+  color: #1174a2;
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 15px;
   // margin-right: -15px;
   // margin-left: -15px;
+  .homepage1-catalog {
+    padding: 5px 5px 20px 5px;
+    img{
+      margin: 0px auto;
+    }
+    div{
+      margin-top: 5px;
+      text-align: center;
+    }
+  }
 }
 
 .homepage2 {
