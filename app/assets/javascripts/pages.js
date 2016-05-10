@@ -7,6 +7,7 @@ $(document).ready(function() {
 });
 
 // центровка подписей каталога по высоте
+// исправить, так как из-за кэша браузера могут быть проблемы
 $(document).ready(function() {
 	var maxdivheight = 0;
     $('.homepage1-catalog > div').each(function(){
