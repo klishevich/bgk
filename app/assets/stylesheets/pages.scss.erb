@@ -296,9 +296,14 @@
   }
 }
 
+.baltgeokom {
+  font-weight: bold;
+  color: #005D8F;
+}
+
 .homepage2 {
   background-image: url(<%= asset_path 'fon2.jpg' %>);
-  background-position: center;
+  background-position: center top;
   font-family: "CenturyGothic";
   h2 {
     text-align: center;
@@ -323,14 +328,59 @@
     }
   }
   .homepage2-info {
-    padding: 20px 20px 20px 20px;
-    .baltgeokom {
-      font-weight: bold;
-      color: #005D8F;
-    }
+    padding: 20px 20px 20px 30px;
+    text-align: justify;
   }
   .homepage2-zakaz {
     padding: 20px 20px 20px 20px;
+  }
+}
+
+.homepage3 {
+  font-family: "CenturyGothic";
+  margin-top: 20px;
+  margin-bottom: 10px;
+  .row {
+    // margin-right: 0;
+    // margin-left: 0;
+    .homepage3-container {
+      position: relative;
+      .homepage3-img {
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+      }
+      .homepage3-title {
+        font-size: 40px;
+        font-weight: bold;
+        color: #5dcef8;
+        // width: 100%;
+        // height: 100%;
+        position: absolute;
+        top: 30px;
+        left: 45px;
+        z-index: 10;
+      }
+    }
+  }
+}
+
+.homepage4 {
+  font-family: "CenturyGothic";
+  padding-left: 30px;
+  padding-right: 30px;
+  .homepage4-info {
+    margin-top: 10px;
+    text-align: justify;
+  }
+  .homepage4-lists {
+    margin-top: 10px;
+    .homepage4-list2 {
+      font-weight: bold;
+      font-style: italic;
+      position: relative;
+    }
   }
 }
 
