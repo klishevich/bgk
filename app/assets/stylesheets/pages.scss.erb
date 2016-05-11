@@ -71,7 +71,7 @@
     // width: 1024px;
     .nav-wrapper {
       font-size: 14px;
-      margin-left: 240px;
+      margin-left: 200px;
       // overflow: hidden;
       width: 580px;
       border-bottom: 1px solid;
@@ -105,7 +105,8 @@
     .download-file {
       font-size: 12px;
       overflow: hidden;
-      float: right;
+      float: left;
+      margin-left: 100px;
       .download-file-icon {
         margin-top: 8px;
         width: 30px;
@@ -179,7 +180,7 @@
   border-radius: 0;
   .hidden-xs {
     .nav-wrapper {
-      margin-left: 0px;
+      margin-left: 8px;
       width: 800px;
       float: left;
       .nav-wrapper-inner{
@@ -221,17 +222,17 @@
       }
     }
     .vash-zakaz {
-      margin-top: 4px;
+      // margin-top: 4px;
       margin-right: 40px;
       width: 232px;
-      height: 38px;
-      float: right;
+      height: 46px;
+      float: left;
       background-repeat: no-repeat;
       background-image: url(<%= asset_path 'backet.png' %>);
-      background-position: center center;
+      background-position: left center;
       .vash-inner {
         margin-left: 40px;
-        margin-top: 8px;
+        margin-top: 12px;
         a {
           color: white;
         }
@@ -386,4 +387,98 @@
 
 #nav-desktop {
   padding-left: 60px;
+}
+
+.nav-footer  {
+  min-height: inherit;
+  font-family: "CenturyGothic";
+  font-size: 12px;
+  background-color: #d4d4d4; 
+  border-color: transparent;
+  margin-top: 6px;
+  // margin-right: -15px;
+  // margin-left: -15px;
+  margin-bottom: 0px;
+  border: none;
+  border-radius: 0;
+  .hidden-xs {
+    .nav-wrapper {
+      margin-left: 130px;
+      // width: 800px;
+      float: left;
+      padding-top: 6px;
+      .nav-wrapper-inner{
+        // width: 760px;
+        margin: 0px auto;
+        // height: 34px;
+        .navbar-nav {
+          li {
+            border-right:1px solid #231f20;
+            margin-top: 3px;
+            margin-bottom: 3px;
+            // + li:before{
+            //   content: "|";
+            //   // margin-top: 11px;
+            //   float: left;
+            //   // color: #005D8F;
+            // }
+          }
+          li.last {
+            border-right: none;
+          }
+          a {
+            margin-left: 10px;
+            margin-right: 10px;
+            padding-top: 3px;
+            padding-bottom: 3px;
+            // display: block;
+            white-space: nowrap;
+            // margin-left: 2px;
+            // padding: 10px 5px;
+            color: #231f20;
+            &:hover {
+              text-decoration: none;
+              color: #006a9c;
+              font-weight: bold;
+            }
+          }
+        }
+      }
+    }
+    .vash-zakaz {
+      margin-top: 0px;
+      margin-right: 40px;
+      width: 232px;
+      height: 42px;
+      float: left;
+      background-repeat: no-repeat;
+      background-image: url(<%= asset_path 'zakaz_bg.png' %>);
+      // background-size: 239px 40px;
+      background-position: center left;
+      .vash-inner {
+        margin-left: 14px;
+        margin-top: 13px;
+        a {
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+.footer-copyright {
+  height: 30px;
+  font-size: 12px;
+  background: #16568e; /* For browsers that do not support gradients */    
+  background: -webkit-linear-gradient(left, #281851 , #00a5dd); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, #281851, #00a5dd); /* For Opera 11.1 to 12.0 */  
+  background: -moz-linear-gradient(right, #281851, #00a5dd); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, #281851 , #00a5dd); /* Standard syntax (must be last) */
+  color: white;
+  div {
+    font-family: "CenturyGothic";
+    width: 100%;
+    text-align: center;
+    padding-top: 6px;
+  }
 }
