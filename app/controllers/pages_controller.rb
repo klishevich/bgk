@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
-  before_filter :authenticate, except: [:show, :home, :newhome]
-
+  before_filter :authenticate, only: [:index, :new, :create, :edit, :update]
+  
   def authenticate
     authenticate_or_request_with_http_basic do |username, password|
       session[:authenticated] = username == ENV["http_basic_name"] && password == ENV["http_basic_pass"]
@@ -53,6 +53,10 @@ class PagesController < ApplicationController
   end
 
   def newhome
+    render layout: "application_new"
+  end
+
+  def new_order
     render layout: "application_new"
   end
 

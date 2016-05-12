@@ -12,5 +12,6 @@ Rails.application.routes.draw do
   resources :pages
 
   get '/newhome', to: 'pages#newhome'
+  get '/new_order', to: 'pages#new_order'
 
 end

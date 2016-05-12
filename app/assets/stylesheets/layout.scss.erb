@@ -1,0 +1,281 @@
+.nav-top {
+  background-color: transparent; 
+  border-color: transparent;
+  font-family: "CenturyGothic";
+  margin-bottom: 0;
+  .hidden-xs{
+    // width: 1024px;
+    .nav-wrapper {
+      font-size: 14px;
+      margin-left: 200px;
+      // overflow: hidden;
+      width: 580px;
+      border-bottom: 1px solid;
+      border-color: #005D8F;
+      float: left;
+      .nav-wrapper-inner{
+        // overflow: hidden;
+        width: 560px;
+        margin: 0px auto;
+        height: 34px;
+        .navbar-nav>li {
+          + li:before{
+            content: "|";
+            margin-top: 11px;
+            float: left;
+            color: #005D8F;
+          }
+          a {
+            display: block;
+            white-space: nowrap;
+            margin-left: 2px;
+            padding: 10px 5px;
+            color: #005D8F;
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+    .download-file {
+      font-size: 12px;
+      overflow: hidden;
+      float: left;
+      margin-left: 100px;
+      .download-file-icon {
+        margin-top: 8px;
+        width: 30px;
+        height: 30px;
+        float: left;
+        background-repeat: no-repeat;
+        background-image: url(<%= asset_path 'download_arrow_bottom.png' %>);
+        background-position: center center;
+      }
+      a {
+        padding-top: 12px;
+        float: left;
+        color: #231F20;
+      }
+
+    }
+  }
+}
+
+.logo-block {
+  font-family: "CenturyGothic";
+  // margin-right: 0px;
+  // margin-left: 0px;
+  .col-md-4 {
+  }
+  .logo-block-text {
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-left: 50px;
+    font-family: "CenturyGothic";
+    font-weight: bold;
+    font-style: italic;
+  }
+  .logo-block-phone {
+    .work-time {
+      color: #231F20;
+      font-size: 11px;
+      margin-left: 34px;
+    }
+  }
+}
+
+.nav-second {
+  min-height: inherit;
+  font-family: "CenturyGothic";
+  font-size: 16px;
+  background-color: #e8e8e8; 
+  border-color: transparent;
+  margin-top: 6px;
+  // margin-right: -15px;
+  // margin-left: -15px;
+  margin-bottom: 0px;
+  border: none;
+  border-radius: 0;
+  .hidden-xs {
+    .nav-wrapper {
+      margin-left: 8px;
+      width: 800px;
+      float: left;
+      .nav-wrapper-inner{
+        // width: 760px;
+        margin: 0px auto;
+        // height: 34px;
+        .navbar-nav {
+          li {
+            border-right:1px solid #231f20;
+            margin-top: 3px;
+            margin-bottom: 3px;
+            // + li:before{
+            //   content: "|";
+            //   // margin-top: 11px;
+            //   float: left;
+            //   // color: #005D8F;
+            // }
+          }
+          li.last {
+            border-right: none;
+          }
+          a {
+            margin-left: 10px;
+            margin-right: 10px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            // display: block;
+            white-space: nowrap;
+            // margin-left: 2px;
+            // padding: 10px 5px;
+            color: #231f20;
+            &:hover {
+              text-decoration: none;
+              color: #006a9c;
+              font-weight: bold;
+            }
+          }
+        }
+      }
+    }
+    .vash-zakaz {
+      // margin-top: 4px;
+      margin-right: 40px;
+      width: 232px;
+      height: 46px;
+      float: left;
+      background-repeat: no-repeat;
+      background-image: url(<%= asset_path 'backet.png' %>);
+      background-position: left center;
+      .vash-inner {
+        margin-left: 40px;
+        margin-top: 12px;
+        a {
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+.nav-stripe {
+  // margin-right: -15px;
+  // margin-left: -15px;
+  height: 10px;
+  margin-bottom: 8px;
+  margin-top: 10px;
+  background-image: url(<%= asset_path 'stripe-border.png' %>);
+  background-repeat: repeat-x;
+}
+
+.nav-breadcrumbs {
+  height: 20px;
+  background: #16568e; /* For browsers that do not support gradients */    
+  background: -webkit-linear-gradient(left, #281851 , #00a5dd); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, #281851, #00a5dd); /* For Opera 11.1 to 12.0 */  
+  background: -moz-linear-gradient(right, #281851, #00a5dd); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, #281851 , #00a5dd); /* Standard syntax (must be last) */
+  color: white;
+  span {
+    font-family: "CenturyGothic";
+    margin-left: 20px;
+    font-style: italic;
+  }
+}
+
+.nav-footer  {
+  min-height: inherit;
+  font-family: "CenturyGothic";
+  font-size: 12px;
+  background-color: #d4d4d4; 
+  border-color: transparent;
+  margin-top: 6px;
+  // margin-right: -15px;
+  // margin-left: -15px;
+  margin-bottom: 0px;
+  border: none;
+  border-radius: 0;
+  .hidden-xs {
+    .nav-wrapper {
+      margin-left: 130px;
+      // width: 800px;
+      float: left;
+      padding-top: 6px;
+      .nav-wrapper-inner{
+        // width: 760px;
+        margin: 0px auto;
+        // height: 34px;
+        .navbar-nav {
+          li {
+            border-right:1px solid #231f20;
+            margin-top: 3px;
+            margin-bottom: 3px;
+            // + li:before{
+            //   content: "|";
+            //   // margin-top: 11px;
+            //   float: left;
+            //   // color: #005D8F;
+            // }
+          }
+          li.last {
+            border-right: none;
+          }
+          a {
+            margin-left: 10px;
+            margin-right: 10px;
+            padding-top: 3px;
+            padding-bottom: 3px;
+            // display: block;
+            white-space: nowrap;
+            // margin-left: 2px;
+            // padding: 10px 5px;
+            color: #231f20;
+            &:hover {
+              text-decoration: none;
+              color: #006a9c;
+              font-weight: bold;
+            }
+          }
+        }
+      }
+    }
+    .vash-zakaz {
+      margin-top: 0px;
+      margin-right: 40px;
+      width: 232px;
+      height: 42px;
+      float: left;
+      background-repeat: no-repeat;
+      background-image: url(<%= asset_path 'zakaz_bg.png' %>);
+      // background-size: 239px 40px;
+      background-position: center left;
+      .vash-inner {
+        margin-left: 14px;
+        margin-top: 13px;
+        a {
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+.footer-copyright {
+  height: 30px;
+  font-size: 12px;
+  background: #16568e; /* For browsers that do not support gradients */    
+  background: -webkit-linear-gradient(left, #281851 , #00a5dd); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, #281851, #00a5dd); /* For Opera 11.1 to 12.0 */  
+  background: -moz-linear-gradient(right, #281851, #00a5dd); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, #281851 , #00a5dd); /* Standard syntax (must be last) */
+  color: white;
+  div {
+    font-family: "CenturyGothic";
+    width: 100%;
+    text-align: center;
+    padding-top: 6px;
+  }
+}
