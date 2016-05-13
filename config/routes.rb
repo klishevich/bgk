@@ -10,8 +10,8 @@ Rails.application.routes.draw do
   end
 
   resources :pages
+  resources :orders
 
   get '/newhome', to: 'pages#newhome'
-  get '/new_order', to: 'pages#new_order'
 
 end
