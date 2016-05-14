@@ -30,6 +30,8 @@ ActiveRecord::Schema.define(version: 20160513032955) do
     t.string   "supply_city"
     t.string   "supply_address"
     t.text     "comment"
+    t.boolean  "need_callback"
+    t.boolean  "need_kp"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
   end

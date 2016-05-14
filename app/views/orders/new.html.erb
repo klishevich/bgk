@@ -14,23 +14,28 @@
 			<%= simple_form_for(@order) do |f| %>
 			<div class="row">
 			<div class="col-md-4 col-md-offset-1">
-				<div class="order_head">ПРЕДСТАВИТЕЛЬ ЗАКАЗЧИКА:</div>
+				<div class="order_head"><%= image_tag("order_pred_zak.png", class: "img-responsive") %></div>
                   <%= f.input :fio, label: false, placeholder: 'ФИО*' %>
                   <%= f.input :position, label: false, placeholder: 'Должность' %>
                   <%= f.input :phone, label: false, placeholder: 'Телефон*' %> 
                   <%= f.input :email, label: false, placeholder: 'E-mail' %>
-                <div class="order_head">ОРГАНИЗАЦИЯ ЗАКАЗЧИКА:</div>
+                <div class="order_head"><%= image_tag("order_org_zak.png", class: "img-responsive") %></div>
                   <%= f.input :org_inn, label: false, placeholder: 'ИНН*' %>
                   <%= f.input :org_name, label: false, placeholder: 'Наименование*' %>
                   <%= f.input :org_phone, label: false, placeholder: 'Телефон*' %>
                   <%= f.input :org_site, label: false, placeholder: 'Веб-сайт' %>
 			</div>
-			<div class="col-md-4 col-md-offset-1">
-				<%= f.input :interest, label: false, placeholder: 'Что заинтересовало?' %>
+			<div class="col-md-4 col-md-offset-2">
+				<%= f.input :interest, label: false, placeholder: 'Что заинтересовало?*' %>
 				<%= f.input :supply_date, label: false, placeholder: 'Планируемый срок поставки' %>
 				<%= f.input :supply_city, label: false, placeholder: 'Город*' %>
 				<%= f.input :supply_address, label: false, placeholder: 'Адрес поставки' %>
-				<%= f.input :comment, label: false, placeholder: 'Комментарий' %>
+				<%= f.input :comment, label: false, placeholder: 'Комментарий к заказу' %>
+				<div class="new_order2-hint">
+					* необходимые поля для заполнения
+				</div>
+				<%= f.input :need_callback, label: 'Перезвонить' %>
+				<%= f.input :need_kp, label: 'Отправить КП' %>
 				<div class="form-group">
                   	<%= f.submit "Отправить", class: "btn btn-primary"%>
                   </div>

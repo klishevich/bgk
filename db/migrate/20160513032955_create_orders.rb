@@ -14,6 +14,8 @@ class CreateOrders < ActiveRecord::Migration
       t.string :supply_city
       t.string :supply_address
       t.text :comment
+      t.boolean :need_callback
+      t.boolean :need_kp
 
       t.timestamps null: false
     end
