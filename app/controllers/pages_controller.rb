@@ -56,6 +56,10 @@ class PagesController < ApplicationController
     render layout: "application_new"
   end
 
+  def about
+    render layout: "application_new"
+  end
+
   private
 
   def page_params
