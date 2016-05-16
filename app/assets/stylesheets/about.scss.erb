@@ -1,9 +1,6 @@
 .about1 {
+    padding: 20px 30px 5px 30px;
 	background-image: url(<%= asset_path 'fon1.jpg' %>);
-    padding-bottom: 10px;
-    padding-top: 20px;
-    padding-left: 30px;
-    padding-right: 30px;
     .about1-text-title {
     	font-style: italic;
         font-weight: bold;
@@ -36,8 +33,33 @@
         text-align: right;
         margin-bottom: 10px;
     }
-    .border {
-        border-top: 2px solid;
-        border-color: grey;
+    .sub1 {
+        margin-bottom: 20px;
+        .border {
+            border-top: 2px solid;
+            border-color: grey;
+        }
+    }
+    .sub2 {
+        .row{
+            margin-left: -27px;
+            .about1-flag {
+                overflow: hidden;
+                .about1-flag-img {
+                    width: 88px;
+                    height: 75px;
+                    float: left;
+                }
+                .about1-flag-text {
+                    font-style: italic;
+                    margin-left: 100px;
+                    padding-top: 16px;
+                    height: 75px;
+                }
+            }
+        }
+    }
+    .nav_stripe {
+
     }
 }
