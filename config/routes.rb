@@ -11,6 +11,7 @@ Rails.application.routes.draw do
 
   resources :pages
   resources :orders
+  resources :order_calls
 
   get '/newhome', to: 'pages#newhome'
   get '/about', to: 'pages#about'

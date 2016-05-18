@@ -1,0 +1,22 @@
+<!-- Modal -->
+<div class="modal fade" id="zakazZvonok" tabindex="-1" role="dialog" aria-labelledby="zakazZvonokLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="zakazZvonokLabel">ЗАКАЗАТЬ ЗВОНОК</h4>
+      </div>
+      <div class="modal-body">
+        <%= simple_form_for(@order_call) do |f| %>
+          <%= f.input :name, label: false, placeholder: 'Имя', required: true %>
+          <%= f.input :phone, label: false, placeholder: 'Телефон', required: true %>
+          <%= f.input :time, label: false, placeholder: 'Удобное время для звонка', required: true %>
+          <%= f.input :question, label: false, placeholder: 'Ваш вопрос', required: true %>
+        <div class="modal-footer">
+          <%= f.submit "ОТПРАВИТЬ", class: "btn btn-primary"%>
+        </div>
+      <% end %>
+      </div>
+    </div>
+  </div>
+</div>

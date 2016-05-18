@@ -53,10 +53,12 @@ class PagesController < ApplicationController
   end
 
   def newhome
+    @order_call = OrderCall.new
     render layout: "application_new"
   end
 
   def about
+    @order_call = OrderCall.new
     render layout: "application_new"
   end
 

@@ -1,4 +1,5 @@
 <% provide(:breadcrumb, "Главная / О компании") %>
+<%= render 'shared/modal_zakaz_zvonok' %>
 <div class="about1">
 	<div class="sub1">
 		<div class="row">
@@ -147,7 +148,8 @@
 		</div>
 		<div class="col-md-3">
 			<div class="about6-zakaz">
-				<a href="#"><%= image_tag("zakaz_zvonok.png", class: "img-responsive zakaz-zvonok-btn", alt: "заказать звонок") %></a>
+				<!-- Button trigger modal -->
+				<%= image_tag("zakaz_zvonok.png", type: "button", class: "img-responsive zakaz-zvonok-btn", "data-toggle" => "modal", "data-target" => "#zakazZvonok", alt: "заказать звонок") %>
 			</div>
 		</div>
 	</div>

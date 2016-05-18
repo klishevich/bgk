@@ -1,0 +1,17 @@
+<% provide(:breadcrumb, "Главная / Заказать звонок") %>
+<div class="bgk_container">
+	<h1>Заказать звонок</h1>
+	<div class="row">
+		<div class="col-md-4">
+			<%= simple_form_for(@order_call) do |f| %>
+	          <%= f.input :name, label: false, placeholder: 'Имя', required: true %>
+	          <%= f.input :phone, label: false, placeholder: 'Телефон', required: true %>
+	          <%= f.input :time, label: false, placeholder: 'Удобное время для звонка', required: true %>
+	          <%= f.input :question, label: false, placeholder: 'Ваш вопрос', required: true %>
+	        <div class="modal-footer">
+	          <%= f.submit "ОТПРАВИТЬ", class: "btn btn-primary"%>
+	        </div>
+	      <% end %>
+		</div>
+	</div>
+</div>
