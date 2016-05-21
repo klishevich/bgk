@@ -22,7 +22,8 @@ class OrdersController < ApplicationController
 
   def order_params
     params.require(:order).permit(:fio, :position, :phone, :email, :org_inn, :org_name, :org_phone,
-    	:org_site, :interest, :supply_date, :supply_city, :supply_address, :comment, :need_callback, :need_kp)
+    	:org_site, :interest, :supply_date, :supply_city, :supply_address, :comment, :need_callback, :need_kp,
+      :myfile)
   end 
 
 end

@@ -14,6 +14,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'unicorn'
 gem 'simple_form'
 gem 'figaro'
+gem 'carrierwave'
 
 group :development, :test do
   gem 'byebug'

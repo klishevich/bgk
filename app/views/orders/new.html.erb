@@ -34,6 +34,7 @@
 				<div class="new_order2-hint">
 					* необходимые поля для заполнения
 				</div>
+				<%= render 'edit_myfile', f: f %>
 				<%= f.input :need_callback, label: 'Перезвонить' %>
 				<%= f.input :need_kp, label: 'Отправить КП' %>
 				<div class="form-group">

@@ -5,5 +5,6 @@ class Order < ActiveRecord::Base
 	validates :org_name, presence: true 
 	validates :org_phone, presence: true 
 	validates :interest, presence: true 
-	validates :supply_city, presence: true 
+	validates :supply_city, presence: true
+	mount_uploader :myfile, MyfileUploader
 end

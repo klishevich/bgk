@@ -1,0 +1,15 @@
+<% myfile_has_errors = @order.errors[:myfile].present? %>
+<% err_class_form_group = myfile_has_errors ? "has-error".html_safe : "".html_safe %>
+<% err_class_label = myfile_has_errors ? "error".html_safe : "".html_safe %>
+<div class="form-group optional order_myfile <%= err_class_form_group %>">
+  <div class="order_myfile_label">
+    Прикрепить файл/<br/>
+    техническое задание/<br/>
+    нормативная документация 
+  </div>
+  <%= f.file_field :myfile %>
+  <%= f.hidden_field :myfile_cache %>
+  <% if myfile_has_errors %>
+    <span class="help-block"><%= @order.errors[:myfile].first %></span>
+  <% end %>
+</div>
