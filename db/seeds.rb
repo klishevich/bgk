@@ -59,3 +59,31 @@ Page.create([
     content: "<p>контент</p>"}
 ])
 
+puts 'Delete Products'
+Product.delete_all
+
+puts 'Create Products'
+Product.create([
+    { title: "1. Геотекстиль иглопробивной БГК-ИП", 
+    subtitle: "- нетканный материал из синтетических волокон, применяется повсеместно в строительстве", 
+    desc_col1: "• Химически стойкий • Отлично пропускает воду • Различается по плотности Выдерживает нагрузки",
+    desc_col2: "тут будет ТАБЛИЦА",
+    desc_full: "тут будет полное описание" , 
+    prop1: true,
+    prop2: true,
+    prop3: false,
+    prop4: false,
+    prop5: true,
+    prop6: true},
+    { title: "2. Другой товар title", 
+    subtitle: "другой подзаголовок subtitle", 
+    desc_col1: "другое desc_col1",
+    desc_col2: "другой desc_col2",
+    desc_full: "другой desc_full" , 
+    prop1: true,
+    prop2: true,
+    prop3: true,
+    prop4: true,
+    prop5: true,
+    prop6: true}
+])

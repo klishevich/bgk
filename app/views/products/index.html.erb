@@ -1,0 +1,27 @@
+<div class="bgk_container">
+<% @products.each do |product| %>
+  <% if authenticated? %>
+    <div class="row">
+      <div class="col-md-22">
+        <div class="form-group">
+          <%= link_to "Редактировать", edit_product_path(product), class: "btn btn-primary" %>
+          <%= link_to "Просмотреть", product, class: "btn btn-default" %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+  <div class="row">
+    <div class="col-md-2">
+      <%= image_tag product.productimg.url, class: "img-responsive" %>
+    </div>
+    <div class="col-md-4">
+      <h1><%= link_to product.title, product %></h1>
+      <h2><%= product.subtitle %></h2>
+      <div><%= product.desc_col1 %></div>
+    </div>
+    <div class="col-md-4">
+      <div><%= product.desc_col2 %></div>
+    </div>
+  </div>
+<% end %>
+</div>

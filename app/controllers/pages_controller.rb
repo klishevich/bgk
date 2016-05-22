@@ -1,16 +1,5 @@
 class PagesController < ApplicationController
   before_filter :authenticate, only: [:index, :new, :create, :edit, :update]
-  
-  def authenticate
-    authenticate_or_request_with_http_basic do |username, password|
-      session[:authenticated] = username == ENV["http_basic_name"] && password == ENV["http_basic_pass"]
-    end
-  end
-
-  def authenticated?
-    session[:authenticated]
-  end
-  helper_method :authenticated?
 
   def home
   end

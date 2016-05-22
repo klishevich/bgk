@@ -1,0 +1,29 @@
+<% provide(:title, @product.title) %>
+<% provide(:keywords, @product.subtitle)%>
+<% provide(:description, @product.desc_col1) %>
+<div class="bgk_container">
+  <div class="row">
+    <div class="col-md-12">
+    	<% if authenticated? %>
+        <div class="form-group">
+    	    <%= link_to "Редактировать", edit_product_path(@product), class: "btn btn-primary" %>
+          <%= link_to "Список страниц", products_path, class: "btn btn-default" %>
+        </div>
+    	<% end %>
+    	<h1><%= @product.title %></h1>
+      <%= image_tag @product.productimg.url %>
+      <p><%= @product.subtitle %></p>
+      <p><%= @product.desc_col1 %></p>
+      <p><%= @product.desc_col2 %></p>
+      <p><%= @product.desc_full %></p>
+      <p><%= @product.prop1 %></p>
+      <p><%= @product.prop2 %></p>
+      <p><%= @product.prop3 %></p>
+      <p><%= @product.prop4 %></p>
+      <p><%= @product.prop5 %></p>
+      <p><%= @product.prop6 %></p>
+      <p><b>сырой desc_col1</b></p>
+  	  <p><%= raw(@product.desc_col1) %></p>
+    </div>
+  </div>
+</div>

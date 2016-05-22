@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  subtitle: MyString
+  prop1: false
+  desc_col1: MyText
+  desc_col2: MyText
+  desc_full: MyText
+
+two:
+  title: MyString
+  subtitle: MyString
+  prop1: false
+  desc_col1: MyText
+  desc_col2: MyText
+  desc_full: MyText

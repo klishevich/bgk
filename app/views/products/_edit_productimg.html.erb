@@ -1,0 +1,22 @@
+<% productimg_has_errors = @product.errors[:productimg].present? %>
+<% err_class_form_group = productimg_has_errors ? "has-error".html_safe : "".html_safe %>
+<% err_class_label = productimg_has_errors ? "error".html_safe : "".html_safe %>
+<div class="form-group optional product_productimg <%= err_class_form_group %>">	
+  <label class="optional <%= err_class_label %>" for="product_productimg">
+    Картинка
+  </label>
+  <br/>
+  <% if @product.productimg? %>
+    <% #link_to(@req.productimg_url.rpartition('/').last, @req.productimg.url)%>
+    <%= link_to(@product.productimg_identifier, @product.productimg.url)%>
+    <br/>
+    <%= f.check_box :remove_productimg %>
+    <label class="string optional checkbox inline" for="product_remove_productimg" style="font-weight: initial;">Удалить файл</label>
+  <% end %>
+  <%= f.file_field :productimg %>
+  <%= f.hidden_field :productimg_cache %>
+  <% if productimg_has_errors %>
+    <span class="help-block"><%= @product.errors[:productimg].first %></span>
+  <% end %>
+</div>
+<%# f.input :productimg, disabled: @req.is_disabled?("name")  %>

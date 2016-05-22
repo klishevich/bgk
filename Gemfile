@@ -15,6 +15,7 @@ gem 'unicorn'
 gem 'simple_form'
 gem 'figaro'
 gem 'carrierwave'
+gem "mini_magick"
 
 group :development, :test do
   gem 'byebug'
