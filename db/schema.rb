@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160522132406) do
+ActiveRecord::Schema.define(version: 20160522115756) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -71,9 +71,9 @@ ActiveRecord::Schema.define(version: 20160522132406) do
     t.text     "desc_col1"
     t.text     "desc_col2"
     t.text     "desc_full"
+    t.string   "productimg"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string   "productimg"
   end
 
 end

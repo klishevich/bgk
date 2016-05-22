@@ -12,6 +12,7 @@ class CreateProducts < ActiveRecord::Migration
       t.text :desc_col1
       t.text :desc_col2
       t.text :desc_full
+      t.string :productimg
 
       t.timestamps null: false
     end
