@@ -13,26 +13,32 @@
       </div>
     <% end %>
     <div class="row">
-      <div class="col-md-2">
+      <div class="col-md-3 product_row-col_img">
         <%= image_tag product.productimg.url, class: "img-responsive" %>
-        <div>
-          <%= image_tag "prop1.png" if product.prop1? %>
-          <%= image_tag "prop2.png"  if product.prop2? %> 
-          <%= image_tag "prop3.png"  if product.prop3? %> 
-          <%= image_tag "prop4.png"  if product.prop4? %> 
-          <%= image_tag "prop5.png"  if product.prop5? %> 
-          <%= image_tag "prop6.png"  if product.prop6? %> 
+        <div class="props">
+          <%= image_tag "prop1.png", class: "props-prop" if product.prop1? %>
+          <%= image_tag "prop2.png", class: "props-prop"  if product.prop2? %> 
+          <%= image_tag "prop3.png", class: "props-prop"  if product.prop3? %> 
+          <%= image_tag "prop4.png", class: "props-prop"  if product.prop4? %> 
+          <%= image_tag "prop5.png", class: "props-prop"  if product.prop5? %> 
+          <%= image_tag "prop6.png", class: "props-prop"  if product.prop6? %> 
         </div>
       </div>
-      <div class="col-md-10 product_row-col1">
-        <div class="product_row-title"><%= product.title %></div>
+      <div class="col-md-9 product_row-col1">
+        <div class="product_row-title_container hidden-xs">
+          <div class="product_row-title"><%= product.title %></div>
+          <div class="product_row-title_triangle"></div>
+        </div>
+        <div class="product_row-title_container-xs visible-xs">
+          <div class="product_row-title-xs"><%= product.title %></div>
+        </div>
         <div class="product_row-bg">
           <div class="row">
             <div class="col-md-7">
               <div class="product_row-subtitle"><%= product.subtitle %></div>
               <div class="product_row-content"><%= raw(product.desc_col1) %></div>
               <div class="product_row-podrobnee">
-                <%= link_to "подробнее...", product %>
+                <%= link_to "подробнее...", "#" %>
               </div>
             </div>
             <div class="col-md-5">
