@@ -15,17 +15,30 @@
     <div class="row">
       <div class="col-md-2">
         <%= image_tag product.productimg.url, class: "img-responsive" %>
+        <div>
+          <%= image_tag "prop1.png" if product.prop1? %>
+          <%= image_tag "prop2.png"  if product.prop2? %> 
+          <%= image_tag "prop3.png"  if product.prop3? %> 
+          <%= image_tag "prop4.png"  if product.prop4? %> 
+          <%= image_tag "prop5.png"  if product.prop5? %> 
+          <%= image_tag "prop6.png"  if product.prop6? %> 
+        </div>
       </div>
       <div class="col-md-10 product_row-col1">
         <div class="product_row-title"><%= product.title %></div>
-        <div class="row">
-          <div class="col-md-7">
-            <div class="product_row-subtitle"><%= product.subtitle %></div>
-            <div class="product_row-content"><%= raw(product.desc_col1) %></div>
-          </div>
-          <div class="col-md-5">
-            <div class="product_row-col2">
-              <%= product.desc_col2 %>
+        <div class="product_row-bg">
+          <div class="row">
+            <div class="col-md-7">
+              <div class="product_row-subtitle"><%= product.subtitle %></div>
+              <div class="product_row-content"><%= raw(product.desc_col1) %></div>
+              <div class="product_row-podrobnee">
+                <%= link_to "подробнее...", product %>
+              </div>
+            </div>
+            <div class="col-md-5">
+              <div class="product_row-col2">
+                <%= raw(product.desc_col2) %>
+              </div>
             </div>
           </div>
         </div>
