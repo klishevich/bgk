@@ -15,7 +15,6 @@ class OrderCallsController < ApplicationController
   end
 
   def show
-    @order_call = OrderCall.find(params[:id])
   end
 
   private

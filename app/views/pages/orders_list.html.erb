@@ -1,0 +1,80 @@
+<% provide(:breadcrumb, "Админка / Обратная связь") %>
+<h2>Обратная связь</h2>
+	<div class="form-group">
+		<a class="btn btn-default" href="/admin">В админку</a>
+	</div>
+	<h3>Размещенные заказы</h3>
+	<table class="table table-condensed" style="table-layout : fixed" width="100%">
+	  <thead>
+	    <tr>
+	    <th width="7%">Id</th>
+	      <th width="13%">created_at</th>
+	      <th width="20%">fio</th>
+	      <th width="20%">email</th>
+	      <th width="20%">phone</th>
+	      <th width="20%">interest</th>
+	    </tr>
+	  </thead>
+	  <tbody>
+	  <% @orders.each do |order| %>
+	    <tr>
+	    	<td><%= order.id %></td>
+	      <td><%= order.created_at.strftime('%d.%m.%Y %T')  %></td>
+	      <td><%= order.fio %></td>
+	      <td><%= order.email %></td>
+	      <td><%= order.phone %></td>
+	      <td><%= order.interest %></td>
+	    </tr>
+	  <% end %>
+	  </tbody>
+	</table>
+	<h3>Заказанные обратные звонки</h3>
+	<table class="table table-condensed" style="table-layout : fixed" width="100%">
+	  <thead>
+	    <tr>
+	    <th width="7%">Id</th>
+	      <th width="13%">created_at</th>
+	      <th width="20%">name</th>
+	      <th width="20%">phone</th>
+	      <th width="20%">time</th>
+	      <th width="20%">question</th>
+	    </tr>
+	  </thead>
+	  <tbody>
+	  <% @order_calls.each do |order| %>
+	    <tr>
+	    	<td><%= order.id %></td>
+	      <td><%= order.created_at.strftime('%d.%m.%Y %T')  %></td>
+	      <td><%= order.name %></td>
+	      <td><%= order.phone %></td>
+	      <td><%= order.time %></td>
+	      <td><%= order.question %></td>
+	    </tr>
+	  <% end %>
+	  </tbody>
+	</table>
+	<h3>Обратная связь с формы контактов</h3>
+	<table class="table table-condensed" style="table-layout : fixed" width="100%">
+	  <thead>
+	    <tr>
+	    <th width="7%">Id</th>
+	      <th width="13%">created_at</th>
+	      <th width="20%">name</th>
+	      <th width="20%">email</th>
+	      <th width="20%">phone</th>
+	      <th width="20%">message</th>
+	    </tr>
+	  </thead>
+	  <tbody>
+	  <% @contacts.each do |contact| %>
+	    <tr>
+	    	<td><%= contact.id %></td>
+	      <td><%= contact.created_at.strftime('%d.%m.%Y %T')  %></td>
+	      <td><%= contact.name %></td>
+	      <td><%= contact.email %></td>
+	      <td><%= contact.phone %></td>
+	      <td><%= contact.message %></td>
+	    </tr>
+	  <% end %>
+	  </tbody>
+	</table>

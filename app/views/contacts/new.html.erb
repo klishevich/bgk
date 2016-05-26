@@ -1,0 +1,40 @@
+<% provide(:breadcrumb, "Главная / Контакты") %>
+<div class="bgk_container">
+	<h1>Контакты</h1>
+	<div class="row">
+		<div class="col-md-4">
+			<h2>ООО "БГК"</h2>
+			<p>Общество с ограниченной Ответственностью "БГК"</p>
+			<p>Мы работаем по всей территории России.</p>
+			<p><b>Фактический  адрес:</b></p>
+			<p>191167, Санкт-Петербург, Невский проспект, 151.</p>
+			<p><b>Телефоны:</b></p>
+			<p>в Санкт-Петербурге: +7 (812) 6485095</p>
+			<p>в Москве: + (495) 555 55 55</p>
+			<p>Регионы: 8 (800) 000 00 00</p>
+			<h3>Реквизиты:</h3>
+			<p>ИНН 7806538157</p>
+			<p>КПП 780601001</p>
+			<p>ОГРН 1147847423712</p>
+			<p>Р/С 407 028 109 030 00000 655</p>
+			<p>БИК 044030723</p>
+			<p>К/С 301 018 101 00000000 723</p>
+		</div>
+		<div class="col-md-4">
+			<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=fvyW600msuq8RRbMz-UqsMJV72hzRAVz&width=100%&height=600&lang=ru_RU&sourceType=constructor&scroll=true"></script>
+		</div>
+		<div class="col-md-4">
+			<h2>Обратная связь</h2>
+			<%= simple_form_for(@contact) do |f| %>
+	          <%= f.input :name %>
+	          <%= f.input :email %>
+	          <%= f.input :phone %>
+	          <%= f.input :topic %>
+	          <%= f.input :message %>
+	        <div>
+	          <%= f.submit "ОТПРАВИТЬ", class: "btn btn-primary"%>
+	        </div>
+	      	<% end %>
+		</div>
+	</div>
+</div>

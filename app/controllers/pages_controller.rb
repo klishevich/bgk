@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  before_filter :authenticate, only: [:index, :new, :create, :edit, :update, :admin]
+  before_filter :authenticate, only: [:index, :new, :create, :edit, :update, :admin, :orders_list]
 
   # def home
   # end
@@ -22,7 +22,7 @@ class PagesController < ApplicationController
     @page = Page.new(page_params)
     if @page.save
       flash[:success] = t(:page_saved_successfuly)
-      redirect_to page_path
+      redirect_to @page
       #edit_page_path @page
     else
       render 'new'
@@ -37,7 +37,7 @@ class PagesController < ApplicationController
     @page = Page.find(params[:id])
     if @page.update_attributes(page_params)
       flash[:success] = t(:page_saved_successfuly)
-      redirect_to page_path
+      redirect_to @page
     else
       render 'edit'
     end
@@ -53,6 +53,12 @@ class PagesController < ApplicationController
   end
 
   def admin
+  end
+
+  def orders_list
+    @orders = Order.last(30).reverse
+    @order_calls = OrderCall.last(30).reverse
+    @contacts = Contact.last(30).reverse
   end
 
   private

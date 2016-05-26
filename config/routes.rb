@@ -10,12 +10,15 @@ Rails.application.routes.draw do
   end
 
   resources :pages
-  resources :orders
-  resources :order_calls
+  resources :orders, only: [:new, :create, :show]
+  resources :order_calls, only: [:new, :create, :show]
   resources :products
+  resources :contacts, only: [:create, :show]
+  get '/contacts', to: 'contacts#new'
 
   root('pages#newhome')
   get '/admin', to: 'pages#admin'
   get '/about', to: 'pages#about'
+  get '/orders_list', to: 'pages#orders_list'
 
 end
