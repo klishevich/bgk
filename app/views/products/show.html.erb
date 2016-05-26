@@ -6,8 +6,9 @@
     <div class="col-md-12">
     	<% if authenticated? %>
         <div class="form-group">
-    	    <%= link_to "Редактировать", edit_product_path(@product), class: "btn btn-primary" %>
+          <a class="btn btn-default" href="/admin">В админку</a>
           <%= link_to "Список страниц", products_path, class: "btn btn-default" %>
+    	    <%= link_to "Редактировать", edit_product_path(@product), class: "btn btn-primary" %>
         </div>
     	<% end %>
     	<h1><%= @product.title %></h1>

@@ -1,5 +1,5 @@
 class OrdersController < ApplicationController
-  layout 'application_new'
+  # layout 'application_new'
 
   def new
     @order = Order.new

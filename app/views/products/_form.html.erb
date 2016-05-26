@@ -1,6 +1,7 @@
 <div class="bgk_container">
 	<div class="form-group">
-	  <%= link_to "Список страниц", products_path, class: "btn btn-default" %>
+		<a class="btn btn-default" href="/admin">В админку</a>
+		<%= link_to "Список страниц", products_path, class: "btn btn-default" %>
 	</div>
 	<div class="form-cont">
 		<%= simple_form_for(@product, html: { class: 'form-horizontal' }) do |f| %>

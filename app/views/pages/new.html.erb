@@ -1,3 +1,21 @@
 <h2>Создание страницы</h2>
-<%= render "form" %>
+<div class="bgk_container">
+	<div class="form-group">
+		<a class="btn btn-default" href="/admin">В админку</a>
+		<%= link_to "Список страниц", pages_path, class: "btn btn-default" %>
+	</div>
+	<div class="form-cont">
+		<%= simple_form_for(@page, html: { class: 'form-horizontal' }) do |f| %>
+		  <%= f.input :title %>
+		  <%= f.input :keywords %>
+		  <%= f.input :description %>
+		  <%= f.input :url %>
+		  <%= f.input :h1 %>
+		  <%= f.input :content, :input_html => {:rows => 20 } %>
+		  <div class="form-group">
+		    <%= f.button :submit, value: "Сохранить", class: "btn btn-primary" %>
+		  </div>
+		<% end %>
+	</div>
+</div>
 

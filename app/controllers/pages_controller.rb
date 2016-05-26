@@ -1,7 +1,12 @@
 class PagesController < ApplicationController
-  before_filter :authenticate, only: [:index, :new, :create, :edit, :update]
+  before_filter :authenticate, only: [:index, :new, :create, :edit, :update, :admin]
 
-  def home
+  # def home
+  # end
+
+  def newhome
+    @order_call = OrderCall.new
+    # render layout: "application_new"
   end
 
   def index
@@ -17,7 +22,8 @@ class PagesController < ApplicationController
     @page = Page.new(page_params)
     if @page.save
       flash[:success] = t(:page_saved_successfuly)
-      redirect_to edit_page_path @page
+      redirect_to page_path
+      #edit_page_path @page
     else
       render 'new'
     end  
@@ -41,14 +47,12 @@ class PagesController < ApplicationController
   	@page=Page.find(params[:id])
   end
 
-  def newhome
-    @order_call = OrderCall.new
-    render layout: "application_new"
-  end
-
   def about
     @order_call = OrderCall.new
-    render layout: "application_new"
+    # render layout: "application_new"
+  end
+
+  def admin
   end
 
   private

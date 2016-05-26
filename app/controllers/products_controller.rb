@@ -1,5 +1,5 @@
 class ProductsController < ApplicationController
-	layout 'application_new'
+	# layout 'application_new'
   before_filter :authenticate, only: [:new, :create, :edit, :update]
 
   def index

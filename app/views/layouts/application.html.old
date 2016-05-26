@@ -12,16 +12,11 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<div class="container">
-  <%= render 'layouts/navigation_top' %>
-  <%= render 'layouts/logo_block' %>
-	<%= render 'layouts/navigation_second' %>
-  <div class='nav_stripe'></div>
-  <div class='nav-breadcrumbs'><span><%= yield(:breadcrumb)%></span></div>
+<div id="main_container" class="container">
+	<%= render 'layouts/navigation' %>
+	<a href="/"><%= image_tag 'baner_header.jpg', class: "img-responsive"%></a>
 	<%= render 'layouts/messages' %>
 	<%= yield %>
-  <div class='nav_stripe'></div>
-  <%= render 'layouts/footer' %>
 </div>
 </body>
 </html>

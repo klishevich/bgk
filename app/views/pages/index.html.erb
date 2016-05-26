@@ -1,32 +1,31 @@
 <h2>Список страниц</h2>
-<div class = "header-button">
-  <%= link_to "Создать", new_page_path, class: "btn btn-primary" %>
-</div>
-<table class="table table-bordered">
-    <thead>
-      <tr>
-        <th></th>
-        <th>TITLE</th>
-        <th>H1</th>
-        <th>MENU TITLE</th>
-        <th>MENU ORDER</th>
-        <th>Дата добавления</th>
-      </tr>
-    </thead>
-    <tbody>
-      <% @pages.each do |page| %>
+<div class="bgk_container">
+  <div class = "header-button">
+    <a class="btn btn-default" href="/admin">В админку</a>
+    <%= link_to "Создать", new_page_path, class: "btn btn-primary" %>
+  </div>
+  <table class="table table-bordered">
+      <thead>
         <tr>
-          <td>
-            <div class="btn-cont"><%= link_to "Редактировать", edit_page_path(page), class: "btn-sm btn-primary" %></div>
-            <div class="btn-cont"><%= link_to "Просмотр", custom_url_path(page), class: "btn-sm btn-primary" %></div>
-            <div class="btn-cont"><%= link_to "Удалить_TO_DO", '#', class: "btn-sm btn-warning" %></div> 
-          </td>
-          <td><%= page.title %></td>
-          <td><%= page.h1 %></td>
-          <td><%= page.menu_title %></td>
-          <td><%= page.menu_order %></td>
-          <td><%= page.created_at.strftime('%d.%m.%Y %T') %></td>
+          <th></th>
+          <th>TITLE</th>
+          <th>H1</th>
+          <th>Дата добавления</th>
         </tr>
-      <% end %>
-    </tbody>
-</table>
+      </thead>
+      <tbody>
+        <% @pages.each do |page| %>
+          <tr>
+            <td>
+              <div class="btn-cont"><%= link_to "Редактировать", edit_page_path(page), class: "btn-sm btn-primary" %></div>
+              <div class="btn-cont"><%= link_to "Просмотр", custom_url_path(page), class: "btn-sm btn-primary" %></div>
+              <div class="btn-cont"><%= link_to "Удалить_TO_DO", '#', class: "btn-sm btn-warning" %></div> 
+            </td>
+            <td><%= page.title %></td>
+            <td><%= page.h1 %></td>
+            <td><%= page.created_at.strftime('%d.%m.%Y %T') %></td>
+          </tr>
+        <% end %>
+      </tbody>
+  </table>
+</div>
