@@ -220,6 +220,7 @@ en:
       product:
         title: "Заголовок"
         subtitle: "Подзаголовок"
+        category_id: "Категория"
         prop1: "Укрепление"
         prop2: "Разделение"
         prop3: "Дренаж"

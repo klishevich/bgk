@@ -1,0 +1,38 @@
+<div class="row">
+  <div class="col-md-3 product_row-col_img">
+    <%= image_tag product.productimg.url, class: "img-responsive" %>
+    <div class="props">
+      <%= image_tag "prop1.png", class: "props-prop", title: Product.human_attribute_name("prop1") if product.prop1? %>
+      <%= image_tag "prop2.png", class: "props-prop", title: Product.human_attribute_name("prop2")  if product.prop2? %> 
+      <%= image_tag "prop3.png", class: "props-prop", title: Product.human_attribute_name("prop3")  if product.prop3? %> 
+      <%= image_tag "prop4.png", class: "props-prop", title: Product.human_attribute_name("prop4")  if product.prop4? %> 
+      <%= image_tag "prop5.png", class: "props-prop", title: Product.human_attribute_name("prop5")  if product.prop5? %> 
+      <%= image_tag "prop6.png", class: "props-prop", title: Product.human_attribute_name("prop6")  if product.prop6? %> 
+    </div>
+  </div>
+  <div class="col-md-9 product_row-col1">
+    <div class="product_row-title_container hidden-xs">
+      <div class="product_row-title"><%= product.title %></div>
+      <div class="product_row-title_triangle"></div>
+    </div>
+    <div class="product_row-title_container-xs visible-xs">
+      <div class="product_row-title-xs"><%= product.title %></div>
+    </div>
+    <div class="product_row-bg">
+      <div class="row">
+        <div class="col-md-7">
+          <div class="product_row-subtitle"><%= product.subtitle %></div>
+          <div class="product_row-content"><%= raw(product.desc_col1) %></div>
+          <div class="product_row-podrobnee">
+            <%= link_to "подробнее...", "#" %>
+          </div>
+        </div>
+        <div class="col-md-5">
+          <div class="product_row-col2">
+            <%= raw(product.desc_col2) %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

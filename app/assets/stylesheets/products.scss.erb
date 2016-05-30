@@ -4,6 +4,36 @@
 	// margin-top: 10px;
 	// padding-top: 30px;
 	// padding-bottom: 30px;
+	.category-title_container {
+		margin-top: 15px;
+		margin-bottom: 15px;
+		margin-left: -15px;
+	    overflow: hidden;
+		.category-title {
+			text-transform: uppercase;
+			padding-left: 15px;
+			padding-top: 6px;
+			width: 400px;
+			height: 50px;
+			font-size: 26px;
+			background: #16568e; /* For browsers that do not support gradients */    
+			background: -webkit-linear-gradient(left, #0099d0, #281851 ); /* For Safari 5.1 to 6.0 */
+			background: -o-linear-gradient(right, #0099d0, #281851); /* For Opera 11.1 to 12.0 */  
+			background: -moz-linear-gradient(right, #0099d0, #281851); /* For Firefox 3.6 to 15 */
+			background: linear-gradient(to right, #0099d0, #281851); /* Standard syntax (must be last) */
+			color: white;
+			float: left;
+			overflow: hidden;
+		}
+		.category-title_triangle {
+			margin-left: 400px;
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 50px 20px 0 0;
+			border-color: #281851 transparent transparent transparent;
+		}
+	}
 	.product_row {
 		margin-top: 10px;
 		margin-bottom: 30px;
@@ -102,6 +132,7 @@
 					text-align: center;
 					background-color: #cdcdcd;
 					padding: 3px;
+					width: 25%;
 				}
 				td.w {
 					background-color: #eaeaea;

@@ -3,7 +3,8 @@ class ProductsController < ApplicationController
   before_filter :authenticate, only: [:new, :create, :edit, :update]
 
   def index
-   	@products = Product.all.order(:id)
+    @categories = Category.all.order(:order)
+   	@products = Product.where('category_id is null').order(:id)
   end
 
   def new
@@ -41,7 +42,7 @@ class ProductsController < ApplicationController
   private
 
   def product_params
-    params.require(:product).permit(:title, :subtitle, :prop1, :prop2, :prop3, :prop4, :prop5, :prop6, 
+    params.require(:product).permit(:title, :subtitle, :category_id, :prop1, :prop2, :prop3, :prop4, :prop5, :prop6, 
     	:desc_col1, :desc_col2, :desc_full, :productimg, :productimg_cache, :remove_productimg)
   end     
 end
