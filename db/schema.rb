@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160530050651) do
+ActiveRecord::Schema.define(version: 20160531050328) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -76,6 +76,37 @@ ActiveRecord::Schema.define(version: 20160530050651) do
     t.datetime "updated_at",  null: false
   end
 
+  create_table "porder_items", force: :cascade do |t|
+    t.integer  "product_id"
+    t.integer  "porder_id"
+    t.integer  "quantity"
+    t.string   "details"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "porder_items", ["porder_id"], name: "index_porder_items_on_porder_id", using: :btree
+  add_index "porder_items", ["product_id"], name: "index_porder_items_on_product_id", using: :btree
+
+  create_table "porder_statuses", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "porders", force: :cascade do |t|
+    t.string   "company_name"
+    t.string   "person_name"
+    t.string   "position"
+    t.string   "phone"
+    t.string   "email"
+    t.integer  "porder_status_id"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+  end
+
+  add_index "porders", ["porder_status_id"], name: "index_porders_on_porder_status_id", using: :btree
+
   create_table "products", force: :cascade do |t|
     t.string   "title"
     t.string   "subtitle"
@@ -96,5 +127,8 @@ ActiveRecord::Schema.define(version: 20160530050651) do
 
   add_index "products", ["category_id"], name: "index_products_on_category_id", using: :btree
 
+  add_foreign_key "porder_items", "porders"
+  add_foreign_key "porder_items", "products"
+  add_foreign_key "porders", "porder_statuses"
   add_foreign_key "products", "categories"
 end

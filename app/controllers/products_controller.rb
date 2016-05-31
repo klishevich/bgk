@@ -5,6 +5,7 @@ class ProductsController < ApplicationController
   def index
     @categories = Category.all.order(:order)
    	@products = Product.where('category_id is null').order(:id)
+    @porder_item = current_porder.porder_items.new
   end
 
   def new

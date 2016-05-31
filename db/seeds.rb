@@ -1,62 +1,69 @@
 #encoding: utf-8
 
-puts 'Delete Categories'
-puts 'Create Categories'
-Category.delete_all
-Category.create([
-    { 
-        name: "Геотекстиль БГК", 
-        order: 1
-    },
-    { 
-        name: "Тканое полотно", 
-        order: 2
-    },
-    { 
-        name: "Объемная решетка", 
-        order: 3
-    },
-    { 
-        name: "Геосетки полиэфирные для грунта", 
-        order: 4
-    },
-    { 
-        name: "Геосетка полиэфирная для асфальта", 
-        order: 5
-    },
-    { 
-        name: "Стеклосетка", 
-        order: 6
-    },
-    { 
-        name: "Базальтовая сетка", 
-        order: 7
-    },
-    { 
-        name: "Геосетка полипропиленовая", 
-        order: 8
-    },
-    { 
-        name: "Геоматы", 
-        order: 9
-    },
-    { 
-        name: "Дренажные композиты", 
-        order: 10
-    },
-    { 
-        name: "Габионы", 
-        order: 11
-    },
-    { 
-        name: "Газонная решетка", 
-        order: 12
-    },
-    { 
-        name: "Анкер", 
-        order: 13
-    }
-])
+puts 'Delete and Create PorderStatuses'
+PorderStatus.delete_all
+PorderStatus.create! id: 1, name: "In Progress"
+PorderStatus.create! id: 2, name: "Placed"
+PorderStatus.create! id: 3, name: "Shipped"
+PorderStatus.create! id: 4, name: "Cancelled"
+
+# puts 'Delete Categories'
+# puts 'Create Categories'
+# Category.delete_all
+# Category.create([
+#     { 
+#         name: "Геотекстиль БГК", 
+#         order: 1
+#     },
+#     { 
+#         name: "Тканое полотно", 
+#         order: 2
+#     },
+#     { 
+#         name: "Объемная решетка", 
+#         order: 3
+#     },
+#     { 
+#         name: "Геосетки полиэфирные для грунта", 
+#         order: 4
+#     },
+#     { 
+#         name: "Геосетка полиэфирная для асфальта", 
+#         order: 5
+#     },
+#     { 
+#         name: "Стеклосетка", 
+#         order: 6
+#     },
+#     { 
+#         name: "Базальтовая сетка", 
+#         order: 7
+#     },
+#     { 
+#         name: "Геосетка полипропиленовая", 
+#         order: 8
+#     },
+#     { 
+#         name: "Геоматы", 
+#         order: 9
+#     },
+#     { 
+#         name: "Дренажные композиты", 
+#         order: 10
+#     },
+#     { 
+#         name: "Габионы", 
+#         order: 11
+#     },
+#     { 
+#         name: "Газонная решетка", 
+#         order: 12
+#     },
+#     { 
+#         name: "Анкер", 
+#         order: 13
+#     }
+# ])
 
 # puts 'Delete Pages'
 # Page.delete_all
