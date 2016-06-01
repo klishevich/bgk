@@ -6,8 +6,6 @@ class PorderItem < ActiveRecord::Base
 	validate :product_present
 	validate :porder_present
 
-	before_save :finalize
-
 	private
 	def product_present
 		if product.nil?

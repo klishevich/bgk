@@ -16,6 +16,7 @@ class ApplicationController < ActionController::Base
   end
 
   def current_porder
+    Rails.logger.info("current_porder session[:porder_id] #{session[:porder_id]}")
     if !session[:porder_id].nil?
       Porder.find(session[:porder_id])
     else

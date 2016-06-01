@@ -1,0 +1,5 @@
+<% if @porder.errors.any? || @porder_item.errors.any? %>
+alert("not valid.")
+<% else %>
+  $(".cart-text").html("<%= escape_javascript(render 'layouts/cart_text') %>")
+<% end %>
