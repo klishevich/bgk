@@ -230,6 +230,8 @@ en:
         desc_col1: "Описание первой колонки для каталога"
         desc_col2: "Описание второй колонки для каталога"
         desc_full: "Описание для страницы товара"
+      porder_item:
+        quantity: "Площадь заказа, м2"
   page_saved_successfuly: "Страница сохранена"
   default_title: "Балтгеоком"
   product_saved_successfuly: "Информация по товару сохранена"

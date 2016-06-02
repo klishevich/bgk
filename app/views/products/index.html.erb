@@ -1,12 +1,43 @@
 <% provide(:breadcrumb, "Главная / Каталог") %>
 <div class="bgk_container products">
-	<h3 class="text-center">Products for Sale</h3>
-
-	<div class="row">
-	  <div class="col-xs-6 col-xs-offset-3">
-	    <% @products.each do |product| %>
-	      <%= render "product_row", product: product, porder_item: @porder_item %>
-	    <% end %>
-	  </div>
-	</div>
+<% @categories.each do |category| %>
+  <% if category.products.count > 0 %>
+    <div class="category-title_container">
+      <div class="category-title"><%= category.name %></div>
+      <div class="category-title_triangle"></div>
+    </div>
+  <% end %>
+  <% category.products.each do |product| %>
+    <div class="product_row">
+      <% if authenticated? %>
+        <div class="row">
+          <div class="col-md-22">
+            <div class="form-group">
+              <a class="btn btn-default" href="/admin">В админку</a>
+              <%= link_to "Просмотреть", product, class: "btn btn-default" %>
+              <%= link_to "Редактировать", edit_product_path(product), class: "btn btn-primary" %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+      <%= render "product_row", product: product, porder_item: @porder_item %>
+    </div>
+  <% end %>
+<% end %>
+<% @products.each do |product| %>
+  <div class="product_row">
+    <% if authenticated? %>
+      <div class="row">
+        <div class="col-md-22">
+          <div class="form-group">
+            <a class="btn btn-default" href="/admin">В админку</a>
+            <%= link_to "Просмотреть", product, class: "btn btn-default" %>
+            <%= link_to "Редактировать", edit_product_path(product), class: "btn btn-primary" %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+    <%= render "product_row", product: product, porder_item: @porder_item %>
+  </div>
+<% end %>
 </div>
