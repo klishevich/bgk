@@ -108,7 +108,7 @@ en:
       equal_to: must be equal to %{count}
       even: must be even
       exclusion: is reserved
-      greater_than: must be greater than %{count}
+      greater_than: должно быть больше %{count}
       greater_than_or_equal_to: must be greater than or equal to %{count}
       inclusion: is not included in the list
       invalid: "не валидный"
@@ -232,6 +232,13 @@ en:
         desc_full: "Описание для страницы товара"
       porder_item:
         quantity: "Площадь заказа, м2"
+      porder: 
+        company_name: "Название компании"
+        person_name: "Контактное лицо"
+        position: "Должность"
+        phone: "Телефон"
+        email: "Email"
+        porder_status_id: "Статус"
   page_saved_successfuly: "Страница сохранена"
   default_title: "Балтгеоком"
   product_saved_successfuly: "Информация по товару сохранена"

@@ -3,6 +3,31 @@
 	<div class="form-group">
 		<a class="btn btn-default" href="/admin">В админку</a>
 	</div>
+	<h3>Заказы из каталога</h3>
+	<table class="table table-condensed" style="table-layout : fixed" width="100%">
+	  <thead>
+	    <tr>
+	    <th width="7%">Id</th>
+	      <th width="13%">created_at</th>
+	      <th width="20%">company_name</th>
+	      <th width="20%">person_name</th>
+	      <th width="20%">phone</th>
+	      <th width="20%">email</th>
+	    </tr>
+	  </thead>
+	  <tbody>
+	  <% @porders.each do |order| %>
+	    <tr>
+	    	<td><%= link_to order.id, order %></td>
+	      <td><%= order.created_at.strftime('%d.%m.%Y %T')  %></td>
+	      <td><%= order.company_name %></td>
+	      <td><%= order.person_name %></td>
+	      <td><%= order.phone %></td>
+	      <td><%= order.email %></td>
+	    </tr>
+	  <% end %>
+	  </tbody>
+	</table>
 	<h3>Размещенные заказы</h3>
 	<table class="table table-condensed" style="table-layout : fixed" width="100%">
 	  <thead>

@@ -1,0 +1,22 @@
+<% provide(:breadcrumb, "Главная / Страница заказа") %>
+<div class="bgk_container">
+	<h1 class="bgk_h1">Страница заказа</h1>
+	<% if @porder.porder_items.count == 0 %>
+		<div>Уважаемый клиент, Ваша корзина пуста. Пожалуйста <%= link_to "перейдите в каталог", products_path %> и добавьте товары в корзину.</div>
+	<% else %>
+		<%= simple_form_for(@porder) do |f| %>
+		<div class="sub_title">Ваш заказ</div>
+		<%= f.simple_fields_for :porder_items do |p| %>
+		<%= render 'porder_item_fields', f: p %>
+		<% end %>
+		<%= f.input :company_name %>
+		<%= f.input :person_name %>
+		<%= f.input :position %>
+		<%= f.input :phone %>
+		<%= f.input :email %>
+		 <div class="form-group">
+		    <%= f.submit "Оформить заказ", class: "btn btn-primary"%>
+		  </div>
+		<% end %>
+	<% end %>
+</div>

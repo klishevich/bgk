@@ -2,10 +2,10 @@
 
 puts 'Delete and Create PorderStatuses'
 PorderStatus.delete_all
-PorderStatus.create! id: 1, name: "In Progress"
-PorderStatus.create! id: 2, name: "Placed"
-PorderStatus.create! id: 3, name: "Shipped"
-PorderStatus.create! id: 4, name: "Cancelled"
+PorderStatus.create! id: 1, name: "В процессе"
+PorderStatus.create! id: 2, name: "Размещен"
+PorderStatus.create! id: 3, name: "Завершен"
+PorderStatus.create! id: 4, name: "Отменен"
 
 # puts 'Delete Categories'
 # puts 'Create Categories'

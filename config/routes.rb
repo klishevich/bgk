@@ -30,8 +30,10 @@ Rails.application.routes.draw do
   get '/about', to: 'pages#about'
   get '/orders_list', to: 'pages#orders_list'
 
-  resource :cart, only: [:show, :edit]
-  resources :porders, only: [:edit, :update]
+  # resource :cart, only: [:show, :edit]
+  get '/cart', to: 'porders#cart'
+  get '/porder_placed', to: 'porders#porder_placed'
+  resources :porders, only: [:update, :index, :show ]
   resources :porder_items, only: [:create, :update, :destroy]
 
 end

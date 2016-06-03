@@ -56,6 +56,7 @@ class PagesController < ApplicationController
   end
 
   def orders_list
+    @porders = Porder.where('porder_status_id = 2').last(30).reverse
     @orders = Order.last(30).reverse
     @order_calls = OrderCall.last(30).reverse
     @contacts = Contact.last(30).reverse

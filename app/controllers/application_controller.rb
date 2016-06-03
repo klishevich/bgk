@@ -16,11 +16,15 @@ class ApplicationController < ActionController::Base
   end
 
   def current_porder
-    Rails.logger.info("current_porder session[:porder_id] #{session[:porder_id]}")
+    # Rails.logger.info("current_porder session[:porder_id] #{session[:porder_id]}")
     if !session[:porder_id].nil?
-      Porder.find(session[:porder_id])
+      # Rails.logger.info("Porder.where(session[:porder_id])")
+      # Rails.logger.info(Porder.where(session[:porder_id]))
+      # if Porder.where(session[:porder_id]).count > 0
+        return Porder.find(session[:porder_id])
+      # end
     else
-      Porder.new
+      return Porder.new
     end
   end
   

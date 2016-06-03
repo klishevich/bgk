@@ -1,0 +1,28 @@
+<% provide(:breadcrumb, "Админка / Просмотр заказа") %>
+<div class="bgk_container">
+	<div class="form-group">
+		<a class="btn btn-default" href="/admin">В админку</a>
+		<%= link_to "Список заказов", '/orders_list', class: "btn btn-default" %>
+	</div>
+	<h1 class="bgk_h1">Просмотр заказа</h1>
+	<table class="table table-condensed" style="table-layout : fixed" width="100%">
+		<tr>
+			<th>Название</th>
+			<th>Количество</th>
+			<th>Доп инфомация</th>
+		</tr>
+		<% @porder.porder_items.each do |item| %>
+		<tr>
+			<td><%= item.product.title %></td>
+			<td><%= item.quantity %></td>
+			<td>...</td>
+		</tr>
+		<% end %>
+	</table>
+	<div><%= Porder.human_attribute_name("porder_status_id") %>: <b><%=@porder.porder_status.name %></b></div>
+	<div><%= Porder.human_attribute_name("company_name") %>: <b><%=@porder.company_name %></b></div>
+	<div><%= Porder.human_attribute_name("person_name") %>: <b><%=@porder.person_name %></b></div>
+	<div><%= Porder.human_attribute_name("position") %>: <b><%=@porder.position %></b></div>
+	<div><%= Porder.human_attribute_name("phone") %>: <b><%=@porder.phone %></b></div>
+	<div><%= Porder.human_attribute_name("email") %>: <b><%=@porder.email %></b></div>
+</div>

@@ -1,17 +1,28 @@
 class PordersController < ApplicationController
-	def edit
+	before_filter :authenticate, only: [:show]
+	def cart
 		@porder = current_porder
+		# Rails.logger.info("cart current_porder #{current_porder}")
 	end
 
 	def update
 		@porder = Porder.find(params[:id])
+		@porder.order_placed
 		if @porder.update_attributes(porder_params)
-			flash[:success] = t(:saved_successfuly)
-			redirect_to '/cart'
+			# flash[:success] = t(:saved_successfuly)
+			session[:porder_id] = nil
+			redirect_to '/porder_placed'
 		else
-			render 'edit'
+			render 'cart'
 		end
 	end 
+
+	def show
+		@porder = Porder.find(params[:id])
+	end
+
+	def porder_placed
+	end
 
 	def porder_params
     	params.require(:porder).permit(:company_name, :person_name, :position, :phone, :email, 
