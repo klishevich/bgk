@@ -5,7 +5,8 @@ Rails.application.routes.draw do
 
   get 'porder_items/destroy'
 
-  get 'carts/show'
+  # get 'carts/show'
+  # get 'carts/edit'
 
   if Page.table_exists?
     Page.all.each do |page|
@@ -29,7 +30,8 @@ Rails.application.routes.draw do
   get '/about', to: 'pages#about'
   get '/orders_list', to: 'pages#orders_list'
 
-  resource :cart, only: [:show]
+  resource :cart, only: [:show, :edit]
+  resources :porders, only: [:edit, :update]
   resources :porder_items, only: [:create, :update, :destroy]
 
 end
