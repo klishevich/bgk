@@ -1,43 +1,47 @@
-<% provide(:breadcrumb, "Админка / Обратная связь") %>
-<h2>Обратная связь</h2>
+<% provide(:breadcrumb, "Админка / Заказы") %>
+<h2>Заказы и Обратная связь</h2>
 	<div class="form-group">
 		<a class="btn btn-default" href="/admin">В админку</a>
+	</div>
+	<div class="bs-callout bs-callout-info" id="callout-alerts-no-default"> 
+		<h4>Подсказка</h4> 
+		<p>Id в строках таблицы - это ссылки, кликните для просмотра подробной информации по заказу.</p>
 	</div>
 	<h3>Заказы из каталога</h3>
 	<table class="table table-condensed" style="table-layout : fixed" width="100%">
 	  <thead>
 	    <tr>
 	    <th width="7%">Id</th>
-	      <th width="13%">created_at</th>
-	      <th width="20%">company_name</th>
-	      <th width="20%">person_name</th>
-	      <th width="20%">phone</th>
-	      <th width="20%">email</th>
+	      <th width="13%">Дата создания</th>
+	      <th width="20%">Имя</th>
+	      <th width="20%">Телефон</th>
+	      <th width="20%">Email</th>
+	      <th width="20%">Компания</th>
 	    </tr>
 	  </thead>
 	  <tbody>
 	  <% @porders.each do |order| %>
 	    <tr>
-	    	<td><%= link_to order.id, order %></td>
+	      <td><%= link_to order.id, order %></td>
 	      <td><%= order.created_at.strftime('%d.%m.%Y %T')  %></td>
-	      <td><%= order.company_name %></td>
 	      <td><%= order.person_name %></td>
 	      <td><%= order.phone %></td>
 	      <td><%= order.email %></td>
+	      <td><%= order.company_name %></td>
 	    </tr>
 	  <% end %>
 	  </tbody>
 	</table>
-	<h3>Размещенные заказы</h3>
+	<h3>Заказы без каталога</h3>
 	<table class="table table-condensed" style="table-layout : fixed" width="100%">
 	  <thead>
 	    <tr>
 	    <th width="7%">Id</th>
-	      <th width="13%">created_at</th>
-	      <th width="20%">fio</th>
-	      <th width="20%">email</th>
-	      <th width="20%">phone</th>
-	      <th width="20%">interest</th>
+	      <th width="13%">Дата создания</th>
+	      <th width="20%">Имя</th>
+	      <th width="20%">Телефон</th>
+	      <th width="20%">Интерес</th>
+	      <th width="20%">Компания</th>
 	    </tr>
 	  </thead>
 	  <tbody>
@@ -46,23 +50,23 @@
 	    	<td><%= order.id %></td>
 	      <td><%= order.created_at.strftime('%d.%m.%Y %T')  %></td>
 	      <td><%= order.fio %></td>
-	      <td><%= order.email %></td>
 	      <td><%= order.phone %></td>
 	      <td><%= order.interest %></td>
+	      <td><%= order.org_name %></td>
 	    </tr>
 	  <% end %>
 	  </tbody>
 	</table>
-	<h3>Заказанные обратные звонки</h3>
+	<h3>Обратные звонки</h3>
 	<table class="table table-condensed" style="table-layout : fixed" width="100%">
 	  <thead>
 	    <tr>
 	    <th width="7%">Id</th>
-	      <th width="13%">created_at</th>
-	      <th width="20%">name</th>
-	      <th width="20%">phone</th>
-	      <th width="20%">time</th>
-	      <th width="20%">question</th>
+	      <th width="13%">Дата создания</th>
+	      <th width="20%">Имя</th>
+	      <th width="20%">Телефон</th>
+	      <th width="20%">Время звонка</th>
+	      <th width="20%">Вопрос</th>
 	    </tr>
 	  </thead>
 	  <tbody>
@@ -78,16 +82,16 @@
 	  <% end %>
 	  </tbody>
 	</table>
-	<h3>Обратная связь с формы контактов</h3>
+	<h3>Обратная связь</h3>
 	<table class="table table-condensed" style="table-layout : fixed" width="100%">
 	  <thead>
 	    <tr>
 	    <th width="7%">Id</th>
-	      <th width="13%">created_at</th>
-	      <th width="20%">name</th>
-	      <th width="20%">email</th>
-	      <th width="20%">phone</th>
-	      <th width="20%">message</th>
+	      <th width="13%">Дата создания</th>
+	      <th width="20%">Имя</th>
+	      <th width="20%">Телефон</th>
+	      <th width="20%">Email</th>
+	      <th width="20%">Сообщение</th>
 	    </tr>
 	  </thead>
 	  <tbody>
@@ -96,8 +100,8 @@
 	    	<td><%= contact.id %></td>
 	      <td><%= contact.created_at.strftime('%d.%m.%Y %T')  %></td>
 	      <td><%= contact.name %></td>
-	      <td><%= contact.email %></td>
 	      <td><%= contact.phone %></td>
+	      <td><%= contact.email %></td>
 	      <td><%= contact.message %></td>
 	    </tr>
 	  <% end %>

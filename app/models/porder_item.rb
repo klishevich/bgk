@@ -5,6 +5,7 @@ class PorderItem < ActiveRecord::Base
 	validates :quantity, presence: true, numericality: { only_integer: true, greater_than: 0 }
 	validate :product_present
 	validate :porder_present
+	# validates_uniqueness_of :product_id, scope: [:porder_id]
 
 	private
 	def product_present

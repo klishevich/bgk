@@ -1,11 +1,9 @@
 <% provide(:breadcrumb, "Админка") %>
-<h1>Админка</h1>
-<div class="bgk_container">
-	<ol>
-		<li><%= link_to "Список страниц", pages_path %></li>
-		<li><%= link_to "Создать новую страницу", new_page_path %></li>
-		<li><%= link_to "Список товаров каталога", products_path %></li>
-		<li><%= link_to "Создать новый товар в каталоге", new_product_path %></li>
-		<li><%= link_to "Список Размещенных заказов, Заказанных звонков, Обратной связи", "/orders_list" %></li>
-	</ol>
-</div>
+<h2>Админка</h2>
+<ol>
+	<li><%= link_to "Список страниц", pages_path %></li>
+	<li><%= link_to "Создать новую страницу", new_page_path %></li>
+	<li><%= link_to "Список товаров каталога", products_path %></li>
+	<li><%= link_to "Создать новый товар в каталоге", new_product_path %></li>
+	<li><%= link_to "Заказы и Обратная связь", "/orders_list" %></li>
+</ol>

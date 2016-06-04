@@ -1,0 +1,8 @@
+<% if @porder.errors.any? || @porder_item.errors.any? %>
+alert("Содержит ошибки")
+<% else %>
+	$('#productInCart').modal({
+	  keyboard: false
+	})
+  $(".cart-text").html("<%= escape_javascript(render 'layouts/cart_text') %>")
+<% end %>

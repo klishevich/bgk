@@ -1,5 +1,7 @@
 <% provide(:breadcrumb, "Главная / Каталог") %>
+<%= render 'modal_product_in_cart' %>
 <div class="bgk_container products">
+  <%#= image_tag("zakaz_btn.png", type: "button", class: "img-responsive", "data-toggle" => "modal", "data-target" => "#productInCart", alt: "заказать звонок") %>
 <% @categories.each do |category| %>
   <% if category.products.count > 0 %>
     <div class="category-title_container">
