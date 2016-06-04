@@ -1,3 +1,9 @@
+.porder_item_form {
+	.porder_item_form-submit {
+		text-align: right;
+	}
+}
+
 .cart {
 	.sub_title{
 		font-size: 18px;
@@ -5,3 +11,22 @@
 	}
 }
 
+.porder_item_input {
+    width: 100%;
+    overflow: hidden;
+    .porder_item_input-label {
+    	width: 60%;
+    	float: left;
+    	text-align: right;
+    	padding-top: 8px;
+    	padding-right: 6px;
+    	font-style: italic;
+    }
+    .porder_item_input-field{
+    	width: 40%;
+    	float: left;    
+    	input {
+    		background-color: #cdcdcd;
+    	}	
+    }
+}
