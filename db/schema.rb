@@ -100,6 +100,7 @@ ActiveRecord::Schema.define(version: 20160531050328) do
     t.string   "position"
     t.string   "phone"
     t.string   "email"
+    t.text     "comment"
     t.integer  "porder_status_id"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false

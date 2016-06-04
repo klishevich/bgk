@@ -25,7 +25,7 @@ class PordersController < ApplicationController
 	end
 
 	def porder_params
-    	params.require(:porder).permit(:company_name, :person_name, :position, :phone, :email, 
+    	params.require(:porder).permit(:company_name, :person_name, :position, :phone, :email, :comment,
       	porder_items_attributes: [:id, :product_id, :quantity, :details, :_destroy])
   	end 
 

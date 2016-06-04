@@ -15,7 +15,7 @@
 		<tr>
 			<td><%= item.product.title %></td>
 			<td><%= item.quantity %></td>
-			<td>...</td>
+			<td><%= item.details %></td>
 		</tr>
 		<% end %>
 	</table>
@@ -25,4 +25,5 @@
 	<div><%= Porder.human_attribute_name("position") %>: <b><%=@porder.position %></b></div>
 	<div><%= Porder.human_attribute_name("phone") %>: <b><%=@porder.phone %></b></div>
 	<div><%= Porder.human_attribute_name("email") %>: <b><%=@porder.email %></b></div>
+	<div><%= Porder.human_attribute_name("comment") %>: <b><%=@porder.comment %></b></div>
 </div>

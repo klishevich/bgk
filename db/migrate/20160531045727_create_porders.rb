@@ -6,6 +6,7 @@ class CreatePorders < ActiveRecord::Migration
       t.string :position
       t.string :phone
       t.string :email
+      t.text :comment
       t.references :porder_status, index: true, foreign_key: true
 
       t.timestamps null: false

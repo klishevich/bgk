@@ -239,6 +239,7 @@ en:
         position: "Должность"
         phone: "Телефон"
         email: "Email"
+        comment: "Примечание"
         porder_status_id: "Статус"
   page_saved_successfuly: "Страница сохранена"
   default_title: "Балтгеоком"

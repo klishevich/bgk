@@ -1,22 +1,41 @@
 <% provide(:breadcrumb, "Главная / Страница заказа") %>
-<div class="bgk_container">
+<div class="bgk_container cart">
 	<h1 class="bgk_h1">Страница заказа</h1>
 	<% if @porder.porder_items.count == 0 %>
 		<div>Уважаемый клиент, Ваша корзина пуста. Пожалуйста <%= link_to "перейдите в каталог", products_path %> и добавьте товары в корзину.</div>
 	<% else %>
 		<%= simple_form_for(@porder) do |f| %>
-		<div class="sub_title">Ваш заказ</div>
-		<%= f.simple_fields_for :porder_items do |p| %>
-		<%= render 'porder_item_fields', f: p %>
-		<% end %>
-		<%= f.input :company_name %>
-		<%= f.input :person_name %>
-		<%= f.input :position %>
-		<%= f.input :phone %>
-		<%= f.input :email %>
-		 <div class="form-group">
-		    <%= f.submit "Оформить заказ", class: "btn btn-primary"%>
-		  </div>
+		<div class="subtitle">Ваш заказ</div>
+		<div class="porder_grid">
+			<%= f.simple_fields_for :porder_items do |p| %>
+			<div class="porder_grid-row">
+				<%= render 'porder_item_fields', f: p %>
+			</div>
+			<% end %>
+		</div>
+		<div class="oformlenie">Оформление заказа</div>
+		<div class="row">
+			<div class="col-md-6">
+				<%= f.input :company_name %>
+				<%= f.input :person_name %>
+				<%= f.input :position %>
+			</div>
+			<div class="col-md-6">
+				<%= f.input :phone %>
+				<%= f.input :email %>
+				<%= f.input :comment, rows: 1 %>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="hint">
+					* необходимые поля для заполнения
+				</div>
+				<div class="form-group">
+					<%= f.submit "Оформить заказ", class: "btn btn-primary"%>
+				</div>
+			</div>
+		</div>
 		<% end %>
 	<% end %>
 </div>

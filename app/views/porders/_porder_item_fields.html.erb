@@ -1,20 +1,17 @@
 <div class="nested-fields row">
-  <div class="col-md-2">
-    картинка
+  <div class="col-md-1 field">
+    <%= image_tag f.object.product.productimg.url, class: "img-responsive" %>
   </div>
-  <div class="col-md-2">
-    название
+  <div class="col-md-5 title field">
+    <%= f.object.product.title %>
   </div>
-  <div class="col-md-2">
-    количество
+  <div class="col-md-2 field">
+    <%= f.input :details, label: "Плотность, гр/м" %>
   </div>
-  <div class="col-lg-2">
-    <%= f.input :details %>
+  <div class="col-md-2 field">
+    <%= f.input :quantity, label: "Площадь, м2" %>
   </div>
-  <div class="col-lg-2">
-    <%= f.input :quantity %>
-  </div>
-  <div class="col-lg-2">
-    <%= link_to_remove_association "Удалить", f, class: "btn btn-warning" %>
+  <div class="col-md-2 remove field">
+    <%= link_to_remove_association "Удалить", f, class: "btn btn-default" %>
   </div>
 </div>
