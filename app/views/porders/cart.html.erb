@@ -1,8 +1,8 @@
 <% provide(:breadcrumb, "Главная / Страница заказа") %>
 <div class="bgk_container cart">
-	<h1 class="bgk_h1">Страница заказа</h1>
+	<h1 class="bgk_h1">Ваш заказ</h1>
 	<% if @porder.porder_items.count == 0 %>
-		<div>Уважаемый клиент, Ваша корзина пуста. Пожалуйста <%= link_to "перейдите в каталог", products_path %> и добавьте товары в корзину.</div>
+		<div>Уважаемый клиент! Вы можете оформить заказ по телефону (812) 648 50 95.</div>
 	<% else %>
 		<%= simple_form_for(@porder) do |f| %>
 		<div class="subtitle">Ваш заказ</div>

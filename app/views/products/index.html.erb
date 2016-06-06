@@ -4,7 +4,7 @@
   <%#= image_tag("zakaz_btn.png", type: "button", class: "img-responsive", "data-toggle" => "modal", "data-target" => "#productInCart", alt: "заказать звонок") %>
 <% @categories.each do |category| %>
   <% if category.products.count > 0 %>
-    <div class="category-title_container">
+    <div class="category-title_container hidden-xs">
       <div class="category-title"><%= category.name %></div>
       <div class="category-title_triangle"></div>
     </div>

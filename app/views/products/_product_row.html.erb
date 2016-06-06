@@ -35,14 +35,6 @@
             <%= simple_form_for porder_item, remote: true do |f| %>
               <div class="porder_item_input">
                 <div class="porder_item_input-label">
-                  <%= PorderItem.human_attribute_name("details") %>
-                </div>
-                <div class="porder_item_input-field">
-                  <%= f.input :details, label: false %>
-                </div>
-              </div>
-              <div class="porder_item_input">
-                <div class="porder_item_input-label">
                   <%= PorderItem.human_attribute_name("quantity") %>
                 </div>
                 <div class="porder_item_input-field">
