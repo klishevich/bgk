@@ -1,12 +1,31 @@
 class PagesController < ApplicationController
   before_filter :authenticate, only: [:index, :new, :create, :edit, :update, :admin, :orders_list]
 
-  # def home
-  # end
-
+  # PUBLIC PAGES
   def newhome
     @order_call = OrderCall.new
-    # render layout: "application_new"
+  end  
+
+  def show
+    @page=Page.find(params[:id])
+  end
+
+  def about
+    @order_call = OrderCall.new
+  end
+
+  def primenenie
+  end
+
+  # ADMIN PAGES
+  def admin
+  end
+
+  def orders_list
+    @porders = Porder.where('porder_status_id = 2').last(30).reverse
+    @orders = Order.last(30).reverse
+    @order_calls = OrderCall.last(30).reverse
+    @contacts = Contact.last(30).reverse
   end
 
   def index
@@ -41,25 +60,6 @@ class PagesController < ApplicationController
     else
       render 'edit'
     end
-  end 
-
-  def show
-  	@page=Page.find(params[:id])
-  end
-
-  def about
-    @order_call = OrderCall.new
-    # render layout: "application_new"
-  end
-
-  def admin
-  end
-
-  def orders_list
-    @porders = Porder.where('porder_status_id = 2').last(30).reverse
-    @orders = Order.last(30).reverse
-    @order_calls = OrderCall.last(30).reverse
-    @contacts = Contact.last(30).reverse
   end
 
   private

@@ -29,6 +29,7 @@ Rails.application.routes.draw do
   get '/admin', to: 'pages#admin'
   get '/about', to: 'pages#about'
   get '/orders_list', to: 'pages#orders_list'
+  get '/primenenie', to: 'pages#primenenie'
 
   # resource :cart, only: [:show, :edit]
   get '/cart', to: 'porders#cart'
