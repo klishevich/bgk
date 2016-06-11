@@ -36,5 +36,7 @@ Rails.application.routes.draw do
   get '/porder_placed', to: 'porders#porder_placed'
   resources :porders, only: [:update, :index, :show ]
   resources :porder_items, only: [:create, :update, :destroy]
+  resources :categories, only: [:index, :new, :create, :edit, :update]
+  get '/products_index_adm', to: 'products#index_adm'
 
 end

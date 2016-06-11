@@ -7,7 +7,7 @@
     	<% if authenticated? %>
         <div class="form-group">
           <a class="btn btn-default" href="/admin">В админку</a>
-          <%= link_to "Список страниц", products_path, class: "btn btn-default" %>
+          <%= link_to "Список товаров", products_index_adm_path, class: "btn btn-default" %>
     	    <%= link_to "Редактировать", edit_product_path(@product), class: "btn btn-primary" %>
         </div>
     	<% end %>

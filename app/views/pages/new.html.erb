@@ -6,7 +6,7 @@
 		<%= link_to "Список страниц", pages_path, class: "btn btn-default" %>
 	</div>
 	<div class="form-cont">
-		<%= simple_form_for(@page, html: { class: 'form-horizontal' }) do |f| %>
+		<%= simple_form_for(@page) do |f| %>
 		  <%= f.input :title %>
 		  <%= f.input :keywords %>
 		  <%= f.input :description %>

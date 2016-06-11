@@ -217,6 +217,9 @@ en:
         phone: "Телефон"
         topic: "Тема"
         message: "Сообщение"
+      category:
+        name: "Наименование"
+        order: "Порядок отображения"
       product:
         title: "Заголовок"
         subtitle: "Подзаголовок"
@@ -230,6 +233,7 @@ en:
         desc_col1: "Описание первой колонки для каталога"
         desc_col2: "Описание второй колонки для каталога"
         desc_full: "Описание для страницы товара"
+        order: "Порядок отображения"
       porder_item:
         quantity: "ПЛОЩАДЬ ЗАКАЗА, м2"
         details: "ПЛОТНОСТЬ, гр/м"
@@ -244,3 +248,4 @@ en:
   page_saved_successfuly: "Страница сохранена"
   default_title: "Балтгеоком"
   product_saved_successfuly: "Информация по товару сохранена"
+  saved_successfuly: "Информация сохранена"

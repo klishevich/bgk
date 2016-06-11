@@ -1,11 +1,17 @@
 #encoding: utf-8
 
-puts 'Delete and Create PorderStatuses'
-PorderStatus.delete_all
-PorderStatus.create! id: 1, name: "В процессе"
-PorderStatus.create! id: 2, name: "Размещен"
-PorderStatus.create! id: 3, name: "Завершен"
-PorderStatus.create! id: 4, name: "Отменен"
+puts 'update Product.order'
+
+Product.update_all order: 0 
+
+# puts 'Delete and Create PorderStatuses'
+# PorderStatus.delete_all
+# PorderStatus.create! id: 1, name: "В процессе"
+# PorderStatus.create! id: 2, name: "Размещен"
+# PorderStatus.create! id: 3, name: "Завершен"
+# PorderStatus.create! id: 4, name: "Отменен"
+
+#----------------
 
 # puts 'Delete Categories'
 # puts 'Create Categories'

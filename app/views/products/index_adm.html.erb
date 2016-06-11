@@ -1,0 +1,32 @@
+<% provide(:breadcrumb, "Админка / Список товаров") %>
+<h2>Список товаров</h2>
+<div>
+  <div class = "header-button">
+    <a class="btn btn-default" href="/admin">В админку</a>
+    <%= link_to "Создать", new_product_path, class: "btn btn-primary" %>
+  </div>
+  <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th></th>
+          <th><%= Product.human_attribute_name(:title) %></th>
+          <th><%= Product.human_attribute_name(:category_id) %></th>
+          <th><%= Product.human_attribute_name(:order) %></th>
+          <th>Дата изменения</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @products.each do |prod| %>
+          <tr>
+            <td>
+              <div class="btn-cont"><%= link_to "Редактировать", edit_product_path(prod), class: "btn-sm btn-primary" %></div>
+              <div class="btn-cont"><%= link_to "Просмотр", product_path(prod), class: "btn-sm btn-primary" %></div>
+            <td><%= prod.title %></td>
+            <td><%= prod.category.name if prod.category %></td>
+            <td><%= prod.order %></td>
+            <td><%= prod.updated_at.strftime('%d.%m.%Y %T') %></td>
+          </tr>
+        <% end %>
+      </tbody>
+  </table>
+</div>

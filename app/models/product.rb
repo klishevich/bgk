@@ -5,4 +5,5 @@ class Product < ActiveRecord::Base
 	validates :desc_col1, presence: true
 	mount_uploader :productimg, ProductimgUploader
 	has_many :porder_items
+	validates :order, presence: true
 end

@@ -19,7 +19,7 @@
           <tr>
             <td>
               <div class="btn-cont"><%= link_to "Редактировать", edit_page_path(page), class: "btn-sm btn-primary" %></div>
-              <div class="btn-cont"><%= link_to "Просмотр", custom_url_path(page), class: "btn-sm btn-primary" %></div>
+              <div class="btn-cont"><%= link_to "Просмотр", page_path(page), class: "btn-sm btn-primary" %></div>
               <div class="btn-cont"><%= link_to "Удалить_TO_DO", '#', class: "btn-sm btn-warning" %></div> 
             </td>
             <td><%= page.title %></td>

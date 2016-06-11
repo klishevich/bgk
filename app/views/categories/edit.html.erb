@@ -1,0 +1,15 @@
+<% provide(:breadcrumb, "Админка / Редактирование категории") %>
+<h2>Редактирование категории</h2>
+<div class="form-group">
+	<a class="btn btn-default" href="/admin">В админку</a>
+	<%= link_to "Список страниц", categories_path, class: "btn btn-default" %>
+</div>
+<div class="form-cont">
+	<%= simple_form_for(@category) do |f| %>
+	  <%= f.input :name %>
+	  <%= f.input :order %>
+	  <div class="form-group">
+	    <%= f.button :submit, value: "Сохранить", class: "btn btn-primary" %>
+	  </div>
+	<% end %>
+</div>

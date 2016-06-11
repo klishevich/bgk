@@ -9,7 +9,7 @@
       <div class="category-title_triangle"></div>
     </div>
   <% end %>
-  <% category.products.each do |product| %>
+  <% category.products.order(:order).each do |product| %>
     <div class="product_row">
       <% if authenticated? %>
         <div class="row">

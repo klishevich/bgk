@@ -1,12 +1,13 @@
 <div>
 	<div class="form-group">
 		<a class="btn btn-default" href="/admin">В админку</a>
-		<%= link_to "Список страниц", products_path, class: "btn btn-default" %>
+		<%= link_to "Список товаров", products_index_adm_path, class: "btn btn-default" %>
 	</div>
 	<div class="form-cont">
 		<%= simple_form_for(@product, html: { class: 'form-horizontal' }) do |f| %>
 		  <%= f.input :title %>
 		  <%= f.input :subtitle %>
+		  <%= f.input :order %>
 		  <%= f.input :category_id, collection: Category.order(:order).all, label_method: :name, value_method: :id %>
 		  <%= f.input :prop1 %>
 		  <%= f.input :prop2 %>

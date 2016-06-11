@@ -1,0 +1,29 @@
+<% provide(:breadcrumb, "Админка / Список категорий") %>
+<h2>Список категорий</h2>
+<div>
+  <div class = "header-button">
+    <a class="btn btn-default" href="/admin">В админку</a>
+    <%= link_to "Создать", new_category_path, class: "btn btn-primary" %>
+  </div>
+  <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th></th>
+          <th><%= Category.human_attribute_name(:name) %></th>
+          <th><%= Category.human_attribute_name(:order) %></th>
+          <th>Дата изменения</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @categories.each do |cat| %>
+          <tr>
+            <td>
+              <div class="btn-cont"><%= link_to "Редактировать", edit_category_path(cat), class: "btn-sm btn-primary" %></div>
+            <td><%= cat.name %></td>
+            <td><%= cat.order %></td>
+            <td><%= cat.updated_at.strftime('%d.%m.%Y %T') %></td>
+          </tr>
+        <% end %>
+      </tbody>
+  </table>
+</div>
