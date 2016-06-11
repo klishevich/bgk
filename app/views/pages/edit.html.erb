@@ -3,6 +3,7 @@
 <div class="form-group">
 	<a class="btn btn-default" href="/admin">В админку</a>
 	<%= link_to "Список страниц", pages_path, class: "btn btn-default" %>
+	<%= link_to "Просмотр", custom_url_path(@page), class: "btn btn-default" %>
 </div>
 <div class="form-cont">
 	<%= simple_form_for(@page) do |f| %>

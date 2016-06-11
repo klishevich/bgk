@@ -3,17 +3,19 @@
 <% provide(:description, @page.description) %>
 <% provide(:breadcrumb, "Главная / #{@page.h1}") %>
 <div class="bgk_container">
-  <div class="row">
-    <div class="col-md-12">
-    	<% if authenticated? %>
-        <div class="form-group">
-          <a class="btn btn-default" href="/admin">В админку</a>
-          <%= link_to "Список страниц", pages_path, class: "btn btn-default" %>
-    	    <%= link_to "Редактировать", edit_page_path(@page), class: "btn btn-primary" %>
-        </div>
-    	<% end %>
-    	<h1 class="bgk_h1"><%= @page.h1 %></h1>
-  	<%= raw(@page.content) %>
+  <div class="page">
+    <div class="row">
+      <div class="col-md-12">
+      	<% if authenticated? %>
+          <div class="form-group">
+            <a class="btn btn-default" href="/admin">В админку</a>
+            <%= link_to "Список страниц", pages_path, class: "btn btn-default" %>
+      	    <%= link_to "Редактировать", edit_page_path(@page), class: "btn btn-primary" %>
+          </div>
+      	<% end %>
+      	<h1 class="bgk_h1"><%= @page.h1 %></h1>
+    	<%= raw(@page.content) %>
+      </div>
     </div>
   </div>
 </div>
