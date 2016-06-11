@@ -1,8 +1,103 @@
 #encoding: utf-8
 
-puts 'update Product.order'
+puts 'Create Primenenie Pages'
+Page.create([
+	{ 
+		code: "dor_auto",
+		url: "avtodorozhnoe-stroitelstvo", 
+		h1: "Автодорожное строительство",
+		title: "Автодорожное строительство"
+	},
+	{ 
+		code: "dor_zhd",
+		url: "zheleznodorozhnoe-stroitelstvo", 
+		h1: "Железнодорожное строительство",
+		title: "Железнодорожное строительство"
+	},
+	{ 
+		code: "dor_tunnel",
+		url: "tonnelnoe-stroitelstvo", 
+		h1: "Тоннельное строительство",
+		title: "Тоннельное строительство"
+	},
+	{ 
+		code: "prom_port",
+		url: "stroitelstvo-portov", 
+		h1: "Строительство портов",
+		title: "Строительство портов"
+	},
+	{ 
+		code: "prom_aero",
+		url: "stroitelstvo_ajerodromov", 
+		h1: "Строительство аэродромов",
+		title: "Строительство аэродромов"
+	},
+	{ 
+		code: "prom_zolootvaly",
+		url: "stroitelstvo-zolootvalov", 
+		h1: "Строительство золоотвалов",
+		title: "Строительство золоотвалов"
+	},
+	{ 
+		code: "prom_poligon",
+		url: "stroitelstvo-poligonov-tbo", 
+		h1: "Строительство полигонов ТБО",
+		title: "Строительство полигонов ТБО"
+	},
+	{ 
+		code: "prom_nk",
+		url: "netegazovyj-kompleks", 
+		h1: "Нетегазовый комплекс",
+		title: "Нетегазовый комплекс"
+	},
+	{ 
+		code: "prom_pp",
+		url: "promyshlennye-predprijatija", 
+		h1: "Промышленные предприятия",
+		title: "Промышленные предприятия"
+	},
+	{ 
+		code: "zag_land",
+		url: "landshaftnoe-stroitelstvo", 
+		h1: "Ландшафтное строительство",
+		title: "Ландшафтное строительство"
+	},
+	{ 
+		code: "zag_dach",
+		url: "dachnye-uchastki", 
+		h1: "Дачные участки",
+		title: "Дачные участки"
+	},
+	{ 
+		code: "zag_vod",
+		url: "iskusstvennye-vodoemy", 
+		h1: "Искусственные водоемы",
+		title: "Искусственные водоемы"
+	},
+	{ 
+		code: "zag_eco",
+		url: "stroitelstvo-jekoparkov", 
+		h1: "Строительство экопарков",
+		title: "Строительство экопарков"
+	},
+	{ 
+		code: "zag_el",
+		url: "internet-magazin", 
+		h1: "Интернет магазин",
+		title: "Интернет магазин"
+	},
+	{ 
+		code: "zag_stroi",
+		url: "stroiteljam", 
+		h1: "Строителям",
+		title: "Строителям"
+	}
+    ])
 
-Product.update_all order: 0 
+# puts 'update Product.order'
+# Product.update_all order: 0
+
+#---------------- 
 
 # puts 'Delete and Create PorderStatuses'
 # PorderStatus.delete_all

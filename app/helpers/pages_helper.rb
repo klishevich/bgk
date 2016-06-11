@@ -1,8 +1,19 @@
 module PagesHelper
   def custom_url_path page
-    return '/' if page.menu_order == 1
   	return '/' + page.url if path_exists?(page.url)
     return page_path(page)
+  end
+
+  def custom_url_by_code_link(code, text) 
+    page = Page.where(code: code).first
+    if page
+      # Rails.logger.info("sfasdf #{page.url}")
+      return link_to(text, page) if page.url.blank?
+      # Rails.logger.info("path_exists?(page.url) #{path_exists?(page.url)}")
+      return link_to(text, '/' + page.url) if path_exists?(page.url)
+      return link_to(text, page)
+    end
+    return link_to(text, '#')
   end
 
   private

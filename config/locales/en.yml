@@ -121,7 +121,7 @@ en:
       restrict_dependent_destroy:
         one: "Cannot delete record because a dependent %{record} exists"
         many: "Cannot delete record because dependent %{record} exist"
-      taken: has already been taken
+      taken: "уже был использован"
       too_long:
         one: is too long (maximum is 1 character)
         other: is too long (maximum is %{count} characters)
@@ -210,7 +210,8 @@ en:
         menu_title: "Название пункта меню"
         menu_order: "Порядок в меню (0 не отображать в меню, 1 home page)"
         content: "Содержимое страницы"
-        url: "URL"
+        url: "URL (после изменения требуется перезагрузка сервера)"
+        code: "Иникальный код (латиница)"
       contact:
         name: "Имя"
         email: "Email"

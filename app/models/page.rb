@@ -1,6 +1,7 @@
 class Page < ActiveRecord::Base
   validates :title, presence: true
   validates :h1, presence: true
+  validates_uniqueness_of :code, allow_nil: true
   # validates :menu_order, presence: true
   # validate :no_other_home_page
 

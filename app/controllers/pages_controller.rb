@@ -65,7 +65,8 @@ class PagesController < ApplicationController
   private
 
   def page_params
-    params.require(:page).permit(:content, :title, :keywords, :description, :url, :h1, :menu_title, :menu_order)
+    params.require(:page).permit(:content, :title, :keywords, :description, :url, :h1, :menu_title, :menu_order,
+      :code)
   end  
 
 end
