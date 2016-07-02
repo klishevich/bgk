@@ -1,0 +1,20 @@
+<% pageimg_has_errors = @page.errors[:pageimgs].present? %>
+<% err_class_form_group = pageimg_has_errors ? "has-error".html_safe : "".html_safe %>
+<% err_class_label = pageimg_has_errors ? "error".html_safe : "".html_safe %>
+<div class="form-group optional page_pageimgs <%= err_class_form_group %>">	
+  <label class="optional <%= err_class_label %>" for="page_pageimgs">
+    Картинки
+  </label>
+  <br/>
+  <% if @page.pageimgs? %>
+    <%= @page.pageimgs.map{|img| img.url }.join(", ").to_s %>
+    <br/>
+    <%= f.check_box :remove_pageimgs %>
+    <label class="string optional checkbox inline" for="page_remove_pageimgs" style="font-weight: initial;">Удалить картинки</label>
+  <% end %>
+  <%= f.file_field :pageimgs, multiple: true %>
+  <%= f.hidden_field :pageimgs_cache %>
+  <% if pageimg_has_errors %>
+    <span class="help-block"><%= @page.errors[:pageimgs].first %></span>
+  <% end %>
+</div>

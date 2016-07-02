@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160702030504) do
+ActiveRecord::Schema.define(version: 20160702185339) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -72,9 +72,10 @@ ActiveRecord::Schema.define(version: 20160702030504) do
     t.text     "content"
     t.string   "menu_title"
     t.integer  "menu_order"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
     t.string   "code"
+    t.string   "pageimgs",    default: [],              array: true
   end
 
   create_table "porder_items", force: :cascade do |t|
