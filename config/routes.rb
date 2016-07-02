@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+
+  root('pages#newhome')
+
   get 'porder_items/create'
 
   get 'porder_items/update'
@@ -25,7 +28,6 @@ Rails.application.routes.draw do
   resources :contacts, only: [:create, :show]
   get '/contacts', to: 'contacts#new'
 
-  root('pages#newhome')
   get '/admin', to: 'pages#admin'
   get '/about', to: 'pages#about'
   get '/orders_list', to: 'pages#orders_list'
