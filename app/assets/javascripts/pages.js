@@ -1,13 +1,15 @@
 // фиксирование ширины меню
-$(document).ready(function() {
+/*$(document).ready(function() {
     $('#menu2 > li').each(function(){
     var wid = $(this).width();
     $(this).css('width', wid+'px');
   });
 });
+*/
 
 // центровка подписей каталога по высоте
 // исправить, так как из-за кэша браузера могут быть проблемы
+/*
 $(function() {
 	var maxdivheight = 0;
     $('.homepage1-catalog > div').each(function(){
@@ -33,3 +35,4 @@ $(function() {
         // }
     });
 });
+*/
