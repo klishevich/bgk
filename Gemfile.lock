@@ -48,6 +48,9 @@ GEM
     arel (6.0.3)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
+    bootsy (2.3.0)
+      carrierwave (~> 0.11)
+      mini_magick (~> 4.5)
     builder (3.2.2)
     byebug (8.2.1)
     capistrano (3.4.0)
@@ -186,6 +189,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bootsy
   byebug
   capistrano
   capistrano-bundler
@@ -212,4 +216,4 @@ DEPENDENCIES
   web-console (~> 2.0)
 
 BUNDLED WITH
-   1.11.2
+   1.12.5

@@ -15,4 +15,5 @@
 //= require bootstrap.min
 //= require turbolinks
 //= require cocoon
+//= require bootsy
 //= require_tree .

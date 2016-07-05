@@ -18,6 +18,7 @@ gem 'figaro'
 gem 'carrierwave', github: 'carrierwaveuploader/carrierwave'
 gem "mini_magick"
 gem "cocoon"
+gem 'bootsy'
 
 group :development, :test do
   gem 'byebug'
