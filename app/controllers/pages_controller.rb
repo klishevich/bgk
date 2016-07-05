@@ -54,15 +54,15 @@ class PagesController < ApplicationController
 
   def update
     @page = Page.find(params[:id])
-    old_images = @page.pageimgs
+    # old_images = @page.pageimgs
     @page.assign_attributes(page_params)
-    new_images = @page.pageimgs
-    old_first_img_url = @page.changes['pageimgs'][0].first.to_s
-    new_first_img_url = @page.changes['pageimgs'][1].first.to_s
-    if (old_first_img_url != new_first_img_url)
-      @page.pageimgs = old_images + new_images
-    end
-    Rails.logger.info("first_img_url changes #{old_first_img_url}, #{new_first_img_url}")
+    # new_images = @page.pageimgs
+    # old_first_img_url = @page.changes['pageimgs'][0].first.to_s
+    # new_first_img_url = @page.changes['pageimgs'][1].first.to_s
+    # if (old_first_img_url != new_first_img_url)
+    #   @page.pageimgs = old_images + new_images
+    # end
+    # Rails.logger.info("first_img_url changes #{old_first_img_url}, #{new_first_img_url}")
     if @page.save
       flash[:success] = t(:page_saved_successfuly)
       redirect_to @page
@@ -75,7 +75,7 @@ class PagesController < ApplicationController
 
   def page_params
     params.require(:page).permit(:content, :title, :keywords, :description, :url, :h1, :menu_title, :menu_order,
-      :code, {pageimgs: []}, :remove_pageimgs, :pageimgs_cache)
+      :code, {pageimgs: []}, :remove_pageimgs, :pageimgs_cache, :bootsy_image_gallery_id)
   end  
 
 end
