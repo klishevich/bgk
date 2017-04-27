@@ -82,9 +82,47 @@
       color: #231F20;
       font-size: 11px;
       margin-left: 34px;
+      margin-top: 0;
     }
   }
 }
+
+  .telefonContainer_pic {
+    float: left;
+    img {
+      width: 120px;
+    }
+  }
+
+  .telefonContainer_text {
+    background: linear-gradient(to right, #145f97, #01a3db);
+    width: 200px;
+    height: 100px;
+    margin-left: 150px;
+    position: relative;
+    color: white;
+    padding-top: 10px;
+    padding-left: 20px;
+    font-size: 16px;
+    .telefonContainer_msk {
+      margin-top: 10px;
+    }
+  }
+
+  .telefonContainer_text:before {
+    content: '';
+    line-height: 0;
+    font-size: 0;
+    width: 0;
+    height: 0;
+    border-top: 50px solid transparent;
+    border-bottom: 50px solid #145f97;
+    border-left: 30px solid transparent;
+    border-right: 30px solid #145f97;
+    position: absolute;
+    top: 0;
+    left: -60px;
+  }
 
 .nav-second {
   min-height: inherit;
